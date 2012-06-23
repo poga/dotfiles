@@ -1,0 +1,3 @@
+[submodule "vimplugins/bundle/supertab"]
+	path = vimplugins/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
