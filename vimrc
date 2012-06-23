@@ -112,3 +112,5 @@ let g:rails_history_size = 10
 " When writing a file, if there are errors, have Syntastic plugin mark them
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
+nmap <F8> :TagbarToggle<CR>
