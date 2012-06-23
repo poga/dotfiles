@@ -34,3 +34,9 @@
 [submodule "vim-slim"]
 	path = vim-slim
 	url = git://github.com/bbommarito/vim-slim.git
+[submodule "vimplugins/bundle/vim-slim"]
+	path = vimplugins/bundle/vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
+[submodule "vimplugins/bundle/vim-ruby"]
+	path = vimplugins/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
