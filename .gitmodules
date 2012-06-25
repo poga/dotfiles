@@ -43,3 +43,6 @@
 [submodule "vimplugins/bundle/tagbar"]
 	path = vimplugins/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/mustache"]
+	path = bundle/mustache
+	url = https://github.com/juvenn/mustache.vim.git
