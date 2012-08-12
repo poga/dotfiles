@@ -106,6 +106,9 @@ autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
 " Tab size = 4 in lua files
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 
+" Tab size = 4 in js files
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+
 let g:EasyMotion_leader_key = '<Leader>'
 let g:rails_history_size = 10
 
