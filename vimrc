@@ -5,7 +5,7 @@ imap <S-CR>    <CR><CR>end<Esc>-cc
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-colors lucius
+colors molokai
 set t_Co=256
 set background=dark
 set cursorline
