@@ -11,6 +11,7 @@ set background=dark
 set cursorline
 set term=screen-256color
 set autoread
+set fillchars-=vert:\|
 
 " Powerline
 let g:Powerline_symbols = 'compatible'
@@ -118,4 +119,4 @@ let g:syntastic_auto_loc_list=1
 
 nmap <F8> :TagbarToggle<CR>
 
-let g:SuperTabMappingForward = '<Space>'
+let g:snips_trigger_key='<c-tab>'
