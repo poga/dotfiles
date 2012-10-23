@@ -16,7 +16,7 @@ set fillchars-=vert:\|
 " Powerline
 let g:Powerline_symbols = 'compatible'
 
-set guifont=Inconsolata:h18
+set guifont=Inconsolata:h19
 
 syntax on
 set nu
