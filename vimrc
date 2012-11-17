@@ -95,11 +95,12 @@ endfunction
 
 "}
 
-nmap <Leader>` :CtrlP<CR>
+nmap <Leader>` :CtrlP .<CR>
 
 autocmd VimEnter * IndentGuidesEnable
 
 au BufRead,BufNewFile *.god set filetype=ruby
+au BufRead,BufNewFile *.rt set filetype=html
 
 " Ruby syntax checking
 autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
@@ -203,3 +204,4 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
