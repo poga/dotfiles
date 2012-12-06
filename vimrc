@@ -1,4 +1,7 @@
 call pathogen#infect()
+" Stop annoying ballontips
+set noballooneval
+
 " Ruby auto completion
 imap <S-CR>    <CR><CR>end<Esc>-cc
 
