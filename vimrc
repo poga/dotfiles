@@ -19,6 +19,8 @@ let g:Powerline_symbols = 'compatible'
 
 set guifont=Inconsolata:h19
 
+set colorcolumn=80
+
 syntax on
 set nu
 set nocp
