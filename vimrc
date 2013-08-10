@@ -27,6 +27,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'majutsushi/tagbar'
+Bundle 'Raimondi/delimitMate'
 
 filetype plugin indent on
 
