@@ -29,9 +29,6 @@ filetype plugin indent on
 
 " call pathogen#infect()
 
-" Ruby auto completion
-imap <S-CR>    <CR><CR>end<Esc>-cc
-
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
@@ -42,9 +39,6 @@ set cursorline
 set term=screen-256color
 set autoread
 set fillchars-=vert:\|
-
-" Powerline
-let g:Powerline_symbols = 'compatible'
 
 set guifont=Inconsolata:h19
 
@@ -87,16 +81,6 @@ nmap <tab> v>
 nmap <s-tab> v<
 
 nmap <F5> :NERDTree<CR>
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-let g:acp_behaviorSnipmateLength=1
-
-" bind control-l to hashrocket
-imap <C-l> <Space>=><Space>
-
-" convert word into ruby symbol
-imap <C-k> <C-o>b:<Esc>Ea
-nmap <C-k> lbi:<Esc>E
 
 set list
 set listchars=tab:>-,trail:-
@@ -129,8 +113,10 @@ endfunction
 
 nmap <Leader>` :CtrlP .<CR>
 
+" Enable IndentGuides at startup
 autocmd VimEnter * IndentGuidesEnable
 
+" Filetype settings
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
 
@@ -153,8 +139,3 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
-
-nmap <F8> :TagbarToggle<CR>
-
-let g:snips_trigger_key='<c-tab>'
-
