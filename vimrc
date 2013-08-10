@@ -1,4 +1,33 @@
-call pathogen#infect()
+" Check if Vundle installed
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let iCanHazVundle=0
+endif
+
+" Vundle Bundles
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-endwise'
+Bundle 'bling/vim-airline'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+
+filetype plugin indent on
+
+" call pathogen#infect()
 
 " Ruby auto completion
 imap <S-CR>    <CR><CR>end<Esc>-cc
@@ -6,7 +35,7 @@ imap <S-CR>    <CR><CR>end<Esc>-cc
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-colors Tomorrow-Night-Bright
+colors jellybeans
 set t_Co=256
 set background=dark
 set cursorline
@@ -128,3 +157,4 @@ let g:syntastic_mode_map={ 'mode': 'active',
 nmap <F8> :TagbarToggle<CR>
 
 let g:snips_trigger_key='<c-tab>'
+
