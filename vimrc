@@ -24,6 +24,9 @@ Bundle 'bling/vim-airline'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
 
@@ -140,13 +143,7 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
-" syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_enable_highlighting = 0
-
 " Open NERDTREE if no file parameter given
 autocmd vimenter * if !argc() | NERDTree | endif
+
+nmap <F8> :TagbarToggle<CR>
