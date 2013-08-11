@@ -28,6 +28,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
+Bundle 'othree/vim-javascript-syntax'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'Blackrush/vim-gocode'
 
 filetype plugin indent on
 
@@ -85,6 +88,8 @@ nmap <tab> v>
 nmap <s-tab> v<
 
 nmap <F5> :NERDTree<CR>
+
+set omnifunc=syntaxcomplete#Complete
 
 set list
 set listchars=tab:>-,trail:-
