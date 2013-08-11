@@ -31,6 +31,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'othree/vim-javascript-syntax'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'gkz/vim-ls'
 
 filetype plugin indent on
 
