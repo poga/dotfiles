@@ -32,6 +32,7 @@ Bundle 'othree/vim-javascript-syntax'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'gkz/vim-ls'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on
 
