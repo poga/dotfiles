@@ -25,24 +25,36 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'othree/vim-javascript-syntax'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'Blackrush/vim-gocode'
+" Bundle 'Blackrush/vim-gocode'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'gkz/vim-ls'
 Bundle 'mileszs/ack.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'chriskempson/base16-vim'
+
+"Golang support
+Bundle 'golangtw/go.vim'
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
 filetype plugin indent on
+
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 " call pathogen#infect()
 
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-colors jellybeans
+colorscheme base16-default
 set t_Co=256
 set background=dark
 set cursorline
@@ -141,6 +153,9 @@ autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 " Tab size = 4 in js files
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
 
+" Tab size = 4 in go files
+autocmd FileType go setlocal shiftwidth=4 tabstop=4
+
 let g:EasyMotion_leader_key = '<Leader>'
 let g:rails_history_size = 10
 
@@ -156,3 +171,40 @@ let g:syntastic_mode_map={ 'mode': 'active',
 autocmd vimenter * if !argc() | NERDTree | endif
 
 nmap <F8> :TagbarToggle<CR>
+
+" Auto formatting *.go codes with gofmt
+" au FileType go au BufWritePre <buffer> Fmt
+
+" Go tag support in tagbar (require https://github.com/jstemmer/gotags)
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+" vim-ruby
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
