@@ -39,6 +39,9 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'golangtw/go.vim'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
+"CSharp
+Bundle 'nosami/Omnisharp'
+
 filetype plugin indent on
 
 " Some Linux distributions set filetype in /etc/vimrc.
