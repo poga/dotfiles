@@ -147,14 +147,11 @@ au BufRead,BufNewFile *.rt set filetype=html
 " Ruby syntax checking
 autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
 
-" Tab size = 4 in lua files
+" Tab size = 4 in lua, js, go, c# files
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
-
-" Tab size = 4 in js files
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
-
-" Tab size = 4 in go files
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
+autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 
 let g:EasyMotion_leader_key = '<Leader>'
 let g:rails_history_size = 10
