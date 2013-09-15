@@ -40,7 +40,9 @@ Bundle 'golangtw/go.vim'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
 "CSharp
-Bundle 'nosami/Omnisharp'
+"Bundle 'nosami/Omnisharp'
+"Omnisharp dependency
+"Bundle 'tpope/vim-dispatch'
 
 filetype plugin indent on
 
@@ -65,9 +67,7 @@ set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 
-set guifont=Inconsolata:h19
-
-set colorcolumn=80
+set guifont=Inconsolata:h20
 
 syntax on
 set nu
@@ -208,3 +208,7 @@ let g:tagbar_type_go = {
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+" Complete options (disable preview scratch window, longest removed to aways show menu)
+set completeopt=menu,menuone
+set completeopt=menu,menuone
