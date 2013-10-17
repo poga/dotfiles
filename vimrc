@@ -43,6 +43,8 @@ Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'nosami/Omnisharp'
 "Omnisharp dependency
 Bundle 'tpope/vim-dispatch'
+"Color
+Bundle 'OrangeT/vim-csharp'
 
 " Theme
 Bundle 'sickill/vim-monokai'
@@ -62,7 +64,7 @@ syntax on
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-colorscheme monokai
+colorscheme base16-default
 set t_Co=256
 set background=dark
 set cursorline
