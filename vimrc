@@ -39,13 +39,6 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'golangtw/go.vim'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
-"CSharp
-Bundle 'nosami/Omnisharp'
-"Omnisharp dependency
-Bundle 'tpope/vim-dispatch'
-"Color
-Bundle 'OrangeT/vim-csharp'
-
 " Theme
 Bundle 'sickill/vim-monokai'
 
@@ -217,22 +210,3 @@ let g:tagbar_type_go = {
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
 
-" ======= Omnisharp
-nnoremap <F12> :OmniSharpGotoDefinition<cr>
-nnoremap gd :OmniSharpGotoDefinition<cr>
-nnoremap <leader>fi :OmniSharpFindImplementations<cr>
-nnoremap <leader>ft :OmniSharpFindType<cr>
-nnoremap <leader>fs :OmniSharpFindSymbol<cr>
-nnoremap <leader>fu :OmniSharpFindUsages<cr>
-nnoremap <leader>fm :OmniSharpFindMembersInBuffer<cr>
-nnoremap <leader>tt :OmniSharpTypeLookup<cr>
-
-" rename with dialog
-nnoremap <leader>nm :OmniSharpRename<cr>
-nnoremap <F2> :OmniSharpRename<cr>      
-" rename without dialog - with cursor on the symbol to rename... ':Rename newname'
-command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
-" Force OmniSharp to reload the solution. Useful when switching branches etc.
-nnoremap <leader>rl :OmniSharpReloadSolution<cr>
-nnoremap <leader>cf :OmniSharpCodeFormat<cr>
-nnoremap <leader>tp :OmniSharpAddToProject<cr>
