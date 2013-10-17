@@ -40,9 +40,12 @@ Bundle 'golangtw/go.vim'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
 "CSharp
-"Bundle 'nosami/Omnisharp'
+Bundle 'nosami/Omnisharp'
 "Omnisharp dependency
 "Bundle 'tpope/vim-dispatch'
+
+" Theme
+Bundle 'sickill/vim-monokai'
 
 filetype plugin indent on
 
@@ -59,7 +62,7 @@ syntax on
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-colorscheme base16-default
+colorscheme monokai
 set t_Co=256
 set background=dark
 set cursorline
@@ -67,7 +70,7 @@ set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 
-set guifont=Inconsolata:h20
+set guifont=Inconsolata:h22
 
 syntax on
 set nu
@@ -205,10 +208,9 @@ let g:tagbar_type_go = {
 \ }
 
 " vim-ruby
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+" autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+" autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+" autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " Complete options (disable preview scratch window, longest removed to aways show menu)
-set completeopt=menu,menuone
 set completeopt=menu,menuone
