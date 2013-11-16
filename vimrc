@@ -41,6 +41,7 @@ Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
 " Theme
 Bundle 'sickill/vim-monokai'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 
@@ -57,15 +58,15 @@ syntax on
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-colorscheme base16-default
-set t_Co=256
 set background=dark
+colorscheme solarized
+set t_Co=256
 set cursorline
 set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 
-set guifont=Inconsolata:h22
+set guifont=Menlo:h20
 
 syntax on
 set nu
@@ -209,4 +210,3 @@ let g:tagbar_type_go = {
 
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
-
