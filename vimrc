@@ -28,12 +28,14 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'othree/vim-javascript-syntax'
-" Bundle 'Blackrush/vim-gocode'
+Bundle 'Blackrush/vim-gocode'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'gkz/vim-ls'
 Bundle 'mileszs/ack.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'chriskempson/base16-vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'mikewest/vimroom'
 
 "Golang support
 Bundle 'golangtw/go.vim'
@@ -210,3 +212,9 @@ let g:tagbar_type_go = {
 
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
+
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
