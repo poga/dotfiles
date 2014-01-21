@@ -28,22 +28,24 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'othree/vim-javascript-syntax'
-Bundle 'Blackrush/vim-gocode'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'gkz/vim-ls'
 Bundle 'mileszs/ack.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'mikewest/vimroom'
+Bundle 'ap/vim-css-color'
 
 "Golang support
-Bundle 'golangtw/go.vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'jstemmer/gotags'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
 " Theme
 Bundle 'sickill/vim-monokai'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 filetype plugin indent on
 
@@ -55,8 +57,6 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-" call pathogen#infect()
-
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
@@ -67,8 +67,9 @@ set cursorline
 set term=screen-256color
 set autoread
 set fillchars-=vert:\|
+set colorcolumn=100
 
-set guifont=Menlo:h18
+set guifont=Inconsolata:h20
 
 syntax on
 set nu
@@ -205,11 +206,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-" vim-ruby
-" autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
-" autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-" autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
 
@@ -218,3 +214,6 @@ autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+
+autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
+
