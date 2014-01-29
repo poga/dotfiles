@@ -69,7 +69,7 @@ set autoread
 set fillchars-=vert:\|
 set colorcolumn=100
 
-set guifont=Inconsolata:h20
+set guifont=Inconsolata:h22
 
 syntax on
 set nu
@@ -217,3 +217,7 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 
+" Ruby Autocomplete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
