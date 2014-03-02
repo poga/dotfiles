@@ -35,6 +35,9 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'ap/vim-css-color'
+Bundle 'rking/ag.vim'
+Bundle 'wavded/vim-stylus'
+Bundle 'tpope/vim-surround'
 
 "Golang support
 Bundle 'jnwhiteh/vim-golang'
@@ -67,7 +70,6 @@ set cursorline
 set term=screen-256color
 set autoread
 set fillchars-=vert:\|
-set colorcolumn=100
 
 set guifont=Inconsolata:h22
 
@@ -140,7 +142,7 @@ endfunction
 
 "}
 
-nmap <Leader>` :CtrlP .<CR>
+nmap <Leader>` :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
 " Enable IndentGuides at startup
 autocmd VimEnter * IndentGuidesEnable
@@ -148,9 +150,6 @@ autocmd VimEnter * IndentGuidesEnable
 " Filetype settings
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
-
-" Ruby syntax checking
-autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
 
 " Tab size = 4 in lua, js, go, c# files
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
@@ -221,3 +220,13 @@ autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+" Use ag in CtrlP
+if executable("ag")
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" remap split and vsplit
+nnoremap <leader>s :split<cr>
+nnoremap <leader>vs :vsplit<cr>
