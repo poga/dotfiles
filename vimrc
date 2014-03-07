@@ -40,7 +40,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 
 "Golang support
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'Blackrush/vim-gocode'
 Bundle 'jstemmer/gotags'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
@@ -148,6 +148,7 @@ nmap <Leader>` :ClearCtrlPCache<cr>\|:CtrlP<cr>
 autocmd VimEnter * IndentGuidesEnable
 
 " Filetype settings
+au FileType go au BufWritePre <buffer> Fmt
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
 
