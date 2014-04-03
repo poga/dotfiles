@@ -69,7 +69,7 @@ set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 
-set guifont=Inconsolata:h22
+set guifont=Fantasque\ Sans\ Mono:h22
 
 syntax on
 set nu
