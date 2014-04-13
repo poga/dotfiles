@@ -108,6 +108,7 @@ nmap <tab> v>
 nmap <s-tab> v<
 
 nmap <F5> :NERDTree<CR>
+nmap <Leader>n :NERDTree<CR>
 
 set omnifunc=syntaxcomplete#Complete
 
