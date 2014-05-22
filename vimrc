@@ -28,8 +28,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'othree/vim-javascript-syntax'
+" install YCM with ./install.sh
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'gkz/vim-ls'
+Bundle 'poga/vim-ls'
 Bundle 'mileszs/ack.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'chriskempson/base16-vim'
@@ -41,6 +42,9 @@ Bundle 'tpope/vim-surround'
 
 "Golang support
 Bundle 'fatih/vim-go'
+
+"Haskell
+Bundle 'eagletmt/neco-ghc'
 
 " Theme
 Bundle 'sickill/vim-monokai'
@@ -62,14 +66,14 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 set t_Co=256
 set cursorline
 set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 
-set guifont=Fantasque\ Sans\ Mono:h22
+set guifont=Inconsolata:h24
 
 syntax on
 set nu
@@ -108,7 +112,6 @@ nmap <tab> v>
 nmap <s-tab> v<
 
 nmap <F5> :NERDTree<CR>
-nmap <Leader>n :NERDTree<CR>
 
 set omnifunc=syntaxcomplete#Complete
 
@@ -215,11 +218,6 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 
-" Ruby Autocomplete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
 " Use ag in CtrlP
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
@@ -229,3 +227,10 @@ endif
 " remap split and vsplit
 nnoremap <leader>s :split<cr>
 nnoremap <leader>vs :vsplit<cr>
+
+" disable vim-go's error on save
+let g:go_fmt_fail_silently = 1
+
+" Haskell Auto-completion with YCM
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+
