@@ -66,7 +66,7 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 set background=dark
-colorscheme jellybeans
+colorscheme Tomorrow-Night-Bright
 set t_Co=256
 set cursorline
 set term=screen-256color
@@ -175,8 +175,9 @@ let g:syntastic_mode_map={ 'mode': 'active',
 
 nmap <F8> :TagbarToggle<CR>
 
-" Auto formatting *.go codes with gofmt
-" au FileType go au BufWritePre <buffer> Fmt
+" disable goimports and use gofmt as formatter because goimports will remove
+" unused imports, which is annoying
+let g:go_fmt_command = "gofmt"
 
 " Go tag support in tagbar (require https://github.com/jstemmer/gotags)
 let g:tagbar_type_go = {
