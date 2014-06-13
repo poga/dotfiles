@@ -66,7 +66,7 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme solarized
 set t_Co=256
 set cursorline
 set term=screen-256color
