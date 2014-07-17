@@ -21,7 +21,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-endwise'
 Bundle 'bling/vim-airline'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'airblade/vim-gitgutter'
@@ -33,12 +32,13 @@ Bundle 'othree/vim-javascript-syntax'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'poga/vim-ls'
 Bundle 'mileszs/ack.vim'
-Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'othree/yajs.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'rking/ag.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
+Bundle 'Yggdroot/indentLine'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -145,9 +145,6 @@ endfunction
 "}
 
 nmap <Leader>` :ClearCtrlPCache<cr>\|:CtrlP<cr>
-
-" Enable IndentGuides at startup
-autocmd VimEnter * IndentGuidesEnable
 
 " Filetype settings
 au BufRead,BufNewFile *.god set filetype=ruby
