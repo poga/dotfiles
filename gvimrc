@@ -5,3 +5,5 @@ set columns=200
 
 " Stop annoying ballontips
 set noballooneval
+
+set transparency=5
