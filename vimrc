@@ -39,6 +39,7 @@ Bundle 'rking/ag.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
+Bundle 'exu/pgsql.vim'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -51,6 +52,7 @@ Bundle 'sickill/vim-monokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'junegunn/seoul256.vim'
 
 filetype plugin indent on
 
@@ -66,14 +68,15 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 set background=dark
-colorscheme solarized
+let g:seoul256_background = 233
+colorscheme seoul256
 set t_Co=256
 set cursorline
 set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 
-set guifont=Inconsolata:h24
+set guifont=InputMonoCondensed\ Light:h20
 
 syntax on
 set nu
@@ -115,8 +118,8 @@ nmap <F5> :NERDTree<CR>
 
 set omnifunc=syntaxcomplete#Complete
 
-set list
-set listchars=tab:>-,trail:-
+" tab indent line
+set list lcs=tab:\|\ 
 
 " set leader to ,
 let mapleader=","
@@ -226,8 +229,14 @@ endif
 nnoremap <leader>s :split<cr>
 nnoremap <leader>vs :vsplit<cr>
 
+" == vim-go
 " disable vim-go's error on save
 let g:go_fmt_fail_silently = 1
+" show variable type with <Leader>i
+au FileType go nmap gi <Plug>(go-info)
+" goto declaration with gd
+au FileType go nmap gd <Plug>(go-def)
+
 
 " Haskell Auto-completion with YCM
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
