@@ -175,10 +175,6 @@ let g:syntastic_mode_map={ 'mode': 'active',
 
 nmap <F8> :TagbarToggle<CR>
 
-" disable goimports and use gofmt as formatter because goimports will remove
-" unused imports, which is annoying
-let g:go_fmt_command = "gofmt"
-
 " Go tag support in tagbar (require https://github.com/jstemmer/gotags)
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
