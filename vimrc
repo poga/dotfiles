@@ -95,6 +95,8 @@ set showmode		" Show current mode
 
 set foldnestmax=3
 
+set synmaxcol=120
+
 nnoremap ; :
 
 map <C-h> <C-w>h
