@@ -40,6 +40,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
 Bundle 'exu/pgsql.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -86,6 +87,7 @@ set autoindent
 set smartindent
 set ruler
 set nowrap
+set paste
 
 set nobackup
 set nowb
