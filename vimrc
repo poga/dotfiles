@@ -30,7 +30,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'othree/vim-javascript-syntax'
 " install YCM with ./install.sh --omnisharp-completer
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'poga/vim-ls'
+Bundle 'gkz/vim-ls'
 Bundle 'mileszs/ack.vim'
 Bundle 'othree/yajs.vim'
 Bundle 'chriskempson/base16-vim'
@@ -41,12 +41,15 @@ Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
 Bundle 'exu/pgsql.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'terryma/vim-multiple-cursors'
 
 "Golang support
 Bundle 'fatih/vim-go'
 
 "Haskell
 Bundle 'eagletmt/neco-ghc'
+
+Bundle 'chilicuil/vim-sml-coursera'
 
 " Theme
 Bundle 'sickill/vim-monokai'
@@ -204,9 +207,6 @@ let g:go_fmt_fail_silently = 1
 au FileType go nmap gi <Plug>(go-info)
 " goto declaration with gd
 au FileType go nmap gd <Plug>(go-def)
-" goimports is soooo annoying
-let g:go_fmt_command = "gofmt"
-
 
 " Haskell Auto-completion with YCM
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
