@@ -207,6 +207,8 @@ let g:go_fmt_fail_silently = 1
 au FileType go nmap gi <Plug>(go-info)
 " goto declaration with gd
 au FileType go nmap gd <Plug>(go-def)
+" Disable go import
+let g:go_fmt_command = "gofmt"
 
 " Haskell Auto-completion with YCM
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
