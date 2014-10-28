@@ -123,7 +123,7 @@ nmap <F5> :NERDTree<CR>
 set omnifunc=syntaxcomplete#Complete
 
 " tab indent line
-set list lcs=tab:\|\ 
+"set list lcs=tab:\|\ 
 
 " set leader to ,
 let mapleader=","
