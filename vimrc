@@ -216,3 +216,8 @@ let g:go_fmt_command = "gofmt"
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 autocmd VimEnter * IndentGuidesEnable
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
