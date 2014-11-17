@@ -39,9 +39,11 @@ Bundle 'rking/ag.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'kien/rainbow_parentheses.vim'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -213,3 +215,4 @@ let g:go_fmt_command = "gofmt"
 " Haskell Auto-completion with YCM
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+autocmd VimEnter * IndentGuidesEnable
