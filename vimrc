@@ -219,4 +219,5 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 autocmd VimEnter * IndentGuidesEnable
 
 let g:rainbow_active = 1
+let g:rainbow_ctermfgs = ['green', 'blue', 'yellow', 'red', 'magenta']
 
