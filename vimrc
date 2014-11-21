@@ -43,7 +43,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'oblitum/rainbow'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -55,6 +55,7 @@ Bundle 'chilicuil/vim-sml-coursera'
 
 " Theme
 Bundle 'sickill/vim-monokai'
+Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
@@ -73,9 +74,9 @@ syntax on
 " 連按兩下 j 脫離輸入模式，你知道的，ESC 實在太遠了
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
-set background=dark
 let g:seoul256_background = 233
 colorscheme seoul256
+set background=dark
 set t_Co=256
 set cursorline
 set term=screen-256color
@@ -217,7 +218,5 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 autocmd VimEnter * IndentGuidesEnable
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+let g:rainbow_active = 1
+
