@@ -44,6 +44,7 @@ Bundle 'exu/pgsql.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'oblitum/rainbow'
+Bundle 'jeetsukumaran/vim-buffergator'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -60,6 +61,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'junegunn/seoul256.vim'
+Bundle 'morhetz/gruvbox'
 
 filetype plugin indent on
 
@@ -75,7 +77,7 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
-colorscheme seoul256
+colorscheme gruvbox
 set background=dark
 set t_Co=256
 set cursorline
@@ -209,7 +211,7 @@ let g:go_fmt_fail_silently = 1
 " show variable type with <Leader>i
 au FileType go nmap gi <Plug>(go-info)
 " goto declaration with gd
-au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap gd <Plug>(go-def-vertical)
 " Disable go import
 let g:go_fmt_command = "gofmt"
 
