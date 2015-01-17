@@ -51,6 +51,7 @@ Bundle 'fatih/vim-go'
 
 "Haskell
 Bundle 'eagletmt/neco-ghc'
+Bundle 'dag/vim2hs'
 
 Bundle 'chilicuil/vim-sml-coursera'
 
@@ -216,6 +217,7 @@ au FileType go nmap gd <Plug>(go-def-vertical)
 let g:go_fmt_command = "gofmt"
 
 " Haskell Auto-completion with YCM
+setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 autocmd VimEnter * IndentGuidesEnable
