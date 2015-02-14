@@ -45,6 +45,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'oblitum/rainbow'
 Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'ap/vim-css-color'
 
 "Golang support
 Bundle 'fatih/vim-go'
@@ -89,6 +90,7 @@ set fillchars-=vert:\|
 set guifont=InputMonoCondensed\ Light:h20
 
 syntax on
+set nofoldenable    " disable folding
 set nu
 set nocp
 set backspace=2
