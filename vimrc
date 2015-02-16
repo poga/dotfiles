@@ -54,8 +54,6 @@ Bundle 'fatih/vim-go'
 Bundle 'eagletmt/neco-ghc'
 Bundle 'dag/vim2hs'
 
-Bundle 'chilicuil/vim-sml-coursera'
-
 " Theme
 Bundle 'sickill/vim-monokai'
 Bundle 'tomasr/molokai'
