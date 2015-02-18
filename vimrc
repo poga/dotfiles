@@ -44,7 +44,6 @@ Bundle 'exu/pgsql.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'oblitum/rainbow'
-Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'ap/vim-css-color'
 
 "Golang support
@@ -77,7 +76,7 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
-colorscheme gruvbox
+colorscheme seoul256
 set background=dark
 set t_Co=256
 set cursorline
@@ -89,7 +88,6 @@ set guifont=InputMonoCondensed\ Light:h20
 
 syntax on
 set nofoldenable    " disable folding
-set nu
 set nocp
 set backspace=2
 set autoindent
@@ -168,6 +166,7 @@ autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
+autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
 
 let g:EasyMotion_leader_key = '<Leader>'
 let g:rails_history_size = 10
