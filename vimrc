@@ -76,7 +76,7 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
-colorscheme seoul256
+colorscheme gruvbox
 set background=dark
 set t_Co=256
 set cursorline
