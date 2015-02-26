@@ -94,6 +94,7 @@ set autoindent
 set smartindent
 set ruler
 set nowrap
+set nu
 
 set nobackup
 set nowb
