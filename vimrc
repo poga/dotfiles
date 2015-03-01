@@ -137,29 +137,7 @@ autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
 autocmd VimEnter * IndentGuidesEnable
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
-
-" == Mapping
-nnoremap ; :
-
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-nmap <Space> <PageDown>
-nmap <tab> v>
-nmap <s-tab> v<
-
-nmap <F5> :NERDTree<CR>
-
-nmap <Leader>` :ClearCtrlPCache<cr>\|:CtrlP<cr>
-
-nmap <F8> :TagbarToggle<CR>
 "
-" remap split and vsplit
-nnoremap <leader>s :split<cr>
-nnoremap <leader>vs :vsplit<cr>
-
 " set leader to ,
 let mapleader=","
 let g:mapleader=","
@@ -183,6 +161,29 @@ if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" == Mapping
+nnoremap ; :
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+nmap <Space> <PageDown>
+nmap <tab> v>
+nmap <s-tab> v<
+
+nmap <F5> :NERDTree<CR>
+
+nmap <Leader>` :ClearCtrlPCache<cr>\|:CtrlP<cr>
+
+nmap <F8> :TagbarToggle<CR>
+"
+" remap split and vsplit
+nnoremap <leader>s :split<cr>
+nnoremap <leader>vs :vsplit<cr>
+
 
 " Filetype settings
 au BufRead,BufNewFile *.god set filetype=ruby
