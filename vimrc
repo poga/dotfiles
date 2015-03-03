@@ -58,6 +58,7 @@ Bundle 'marijnh/tern_for_vim'
 " npm i within bundle/tern_for_vim
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
+Bundle 'elzr/vim-json'
 
 " Theme
 Bundle 'sickill/vim-monokai'
