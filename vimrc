@@ -206,7 +206,7 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " == Javascript
 let g:syntastic_javascript_checkers = ['eslint']
-" npm i -g eslint eslint-babel
+" npm i -g eslint babel-eslint
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
