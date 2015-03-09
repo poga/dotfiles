@@ -206,7 +206,8 @@ setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " == Javascript
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['eslint']
+" eslint is slow, enable it if needed
 " npm i -g eslint babel-eslint
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
