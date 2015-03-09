@@ -189,6 +189,7 @@ nnoremap <leader>vs :vsplit<cr>
 " Filetype settings
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
+au BufRead,BufNewFile .eslintrc set filetype=json
 
 " == vim-go
 " disable vim-go's error on save
