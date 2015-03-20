@@ -54,8 +54,6 @@ Bundle 'dag/vim2hs'
 " Javascript & LiveScript & CoffeeScript
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'othree/yajs.vim'
-Bundle 'marijnh/tern_for_vim'
-" npm i within bundle/tern_for_vim
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
 Bundle 'elzr/vim-json'
@@ -206,9 +204,6 @@ setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " == Javascript
-let g:syntastic_javascript_checkers = ['eslint']
-" eslint is slow, enable it if needed
-" npm i -g eslint babel-eslint
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
