@@ -40,6 +40,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'oblitum/rainbow'
+Bundle 'godlygeek/tabular'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -57,6 +58,8 @@ Bundle 'othree/yajs.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
 Bundle 'elzr/vim-json'
+Bundle 'mgechev/vim-jsx'
+Bundle 'marijnh/tern_for_vim'
 
 " Theme
 Bundle 'sickill/vim-monokai'
@@ -188,6 +191,7 @@ nnoremap <leader>vs :vsplit<cr>
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
 au BufRead,BufNewFile .eslintrc set filetype=json
+au BufRead,BufNewFile .tern-project set filetype=json
 
 " == vim-go
 " disable vim-go's error on save
@@ -204,6 +208,7 @@ setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " == Javascript
+let g:jsx_ext_required = 0
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
