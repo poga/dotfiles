@@ -60,6 +60,9 @@ Bundle 'gkz/vim-ls'
 Bundle 'elzr/vim-json'
 Bundle 'mgechev/vim-jsx'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'vim-scripts/SyntaxComplete'
 
 " Theme
 Bundle 'sickill/vim-monokai'
