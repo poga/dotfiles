@@ -39,8 +39,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'oblitum/rainbow'
-Bundle 'godlygeek/tabular'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -53,16 +51,12 @@ Bundle 'eagletmt/neco-ghc'
 Bundle 'dag/vim2hs'
 
 " Javascript & LiveScript & CoffeeScript
-Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'othree/yajs.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
-Bundle 'elzr/vim-json'
-Bundle 'mgechev/vim-jsx'
-Bundle 'marijnh/tern_for_vim'
+Bundle 'othree/vim-jsx'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/SyntaxComplete'
 
 " Theme
 Bundle 'sickill/vim-monokai'
@@ -158,9 +152,6 @@ let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
-let g:rainbow_active = 1
-let g:rainbow_ctermfgs = ['green', 'blue', 'yellow', 'red', 'magenta']
-
 " Use ag in CtrlP
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
@@ -189,7 +180,6 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>vs :vsplit<cr>
 
-
 " Filetype settings
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
@@ -209,9 +199,6 @@ let g:go_fmt_command = "gofmt"
 " == Haskell Auto-completion with YCM
 setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
-
-" == Javascript
-let g:jsx_ext_required = 0
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
