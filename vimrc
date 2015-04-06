@@ -57,6 +57,7 @@ Bundle 'gkz/vim-ls'
 Bundle 'othree/vim-jsx'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mtscout6/vim-cjsx'
 
 " Theme
 Bundle 'sickill/vim-monokai'
