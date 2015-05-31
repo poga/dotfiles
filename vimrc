@@ -61,12 +61,21 @@ Bundle 'mtscout6/vim-cjsx'
 
 " Theme
 Bundle 'sickill/vim-monokai'
-Bundle 'tomasr/molokai'
+Bundle 'fatih/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'junegunn/seoul256.vim'
 Bundle 'morhetz/gruvbox'
+
+" Rust
+Bundle 'rust-lang/rust.vim'
+Bundle 'phildawes/racer'
+
+" TOML
+Bundle 'cespare/vim-toml'
+
+Bundle 'elixir-lang/vim-elixir'
 
 filetype plugin indent on
 
@@ -130,6 +139,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType ls setlocal shiftwidth=4 tabstop=4
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
@@ -190,12 +200,19 @@ au BufRead,BufNewFile .tern-project set filetype=json
 " == vim-go
 " disable vim-go's error on save
 let g:go_fmt_fail_silently = 1
-" show variable type with <Leader>i
+" show variable type with gi
 au FileType go nmap gi <Plug>(go-info)
 " goto declaration with gd
 au FileType go nmap gd <Plug>(go-def-vertical)
+au FileType go nmap gs <Plug>(go-implements)
+au FileType go nmap gr <Plug>(go-rename)
 " Disable go import
 let g:go_fmt_command = "gofmt"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " == Haskell Auto-completion with YCM
 setlocal omnifunc=necoghc#omnifunc
@@ -206,4 +223,7 @@ autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+
+let g:racer_cmd = "/Users/poga/projects/racer/target/release/racer"
+let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
 
