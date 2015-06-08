@@ -39,6 +39,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'mhinz/vim-startify'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -95,7 +96,6 @@ colorscheme seoul256
 set background=dark
 set t_Co=256
 set cursorline
-set term=screen-256color
 set autoread
 set fillchars-=vert:\|
 set nofoldenable    " disable folding
@@ -176,6 +176,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
 
 nmap <Space> <PageDown>
 nmap <tab> v>
