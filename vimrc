@@ -39,7 +39,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'mhinz/vim-startify'
 
 " CSS
 Bundle 'ap/vim-css-color'
