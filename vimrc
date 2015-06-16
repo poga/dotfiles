@@ -39,6 +39,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'vim-scripts/Align'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -229,3 +230,6 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 let g:racer_cmd = "/Users/poga/projects/racer/target/release/racer"
 let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
 
+command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
+
+set clipboard=unnamed   " yank to the system register (*) by default
