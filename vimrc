@@ -169,7 +169,7 @@ if executable("ag")
 endif
 
 " == Mapping
-nnoremap ; :
+" nnoremap ; :
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
