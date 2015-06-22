@@ -36,7 +36,6 @@ Bundle 'rking/ag.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/Align'
@@ -91,9 +90,9 @@ syntax on
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
-colorscheme seoul256
-
 set background=dark
+colorscheme solarized
+
 set t_Co=256
 set cursorline
 set autoread
@@ -143,8 +142,6 @@ autocmd FileType ls setlocal shiftwidth=4 tabstop=4
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
-
-autocmd VimEnter * IndentGuidesEnable
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 "
