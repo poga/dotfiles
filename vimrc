@@ -70,12 +70,13 @@ Bundle 'morhetz/gruvbox'
 
 " Rust
 Bundle 'rust-lang/rust.vim'
-Bundle 'phildawes/racer'
 
 " TOML
 Bundle 'cespare/vim-toml'
 
 Bundle 'elixir-lang/vim-elixir'
+
+Bundle 'lambdatoast/elm.vim'
 
 filetype plugin indent on
 
@@ -91,7 +92,7 @@ imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
-colorscheme solarized
+colorscheme seoul256
 
 set t_Co=256
 set cursorline
@@ -223,9 +224,6 @@ autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
-
-let g:racer_cmd = "/Users/poga/projects/racer/target/release/racer"
-let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
 
 command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
