@@ -39,6 +39,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/Align'
+Bundle 'DavidEGx/ctrlp-smarttabs'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -228,3 +229,5 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
 set clipboard=unnamed   " yank to the system register (*) by default
+
+let g:ctrlp_extensions = ['smarttabs']
