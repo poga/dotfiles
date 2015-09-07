@@ -40,6 +40,7 @@ Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
+Bundle 'mhinz/vim-startify'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -48,7 +49,6 @@ Bundle 'ap/vim-css-color'
 Bundle 'fatih/vim-go'
 
 " Haskell
-Bundle 'eagletmt/neco-ghc'
 Bundle 'dag/vim2hs'
 
 " Javascript & LiveScript & CoffeeScript
@@ -215,10 +215,6 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
-" == Haskell Auto-completion with YCM
-setlocal omnifunc=necoghc#omnifunc
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
