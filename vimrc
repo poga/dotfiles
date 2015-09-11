@@ -49,7 +49,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'fatih/vim-go'
 
 " Haskell
-Bundle 'dag/vim2hs'
+Bundle 'neovimhaskell/haskell-vim'
 
 " Javascript & LiveScript & CoffeeScript
 Bundle 'othree/yajs.vim'
@@ -209,7 +209,7 @@ au FileType go nmap gd <Plug>(go-def-vertical)
 au FileType go nmap gs <Plug>(go-implements)
 au FileType go nmap gr <Plug>(go-rename)
 " Disable go import
-let g:go_fmt_command = "gofmt"
+let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -224,7 +224,7 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 
 command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
-set clipboard=unnamed   " yank to the system register (*) by default
+"set clipboard=unnamed   " yank to the system register (*) by default (osx only)
 
 let g:ctrlp_extensions = ['smarttabs']
 
@@ -232,4 +232,12 @@ let g:ctrlp_extensions = ['smarttabs']
 autocmd User Startified set buftype=
 autocmd User Startified AirlineRefresh
 let g:startify_change_to_dir = 0
+
+" Haskell
+let g:haskell_enable_quantification = 1
+let g:haskell_enable_recursivedo = 1
+let g:haskell_enable_arrowsyntax = 1
+let g:haskell_enable_pattern_synonyms = 1
+let g:haskell_enable_typeroles = 1
+let g:haskell_enable_static_pointers = 1
 
