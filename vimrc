@@ -227,3 +227,9 @@ command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 set clipboard=unnamed   " yank to the system register (*) by default
 
 let g:ctrlp_extensions = ['smarttabs']
+
+" vim-startify
+autocmd User Startified set buftype=
+autocmd User Startified AirlineRefresh
+let g:startify_change_to_dir = 0
+
