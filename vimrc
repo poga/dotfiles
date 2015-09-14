@@ -224,7 +224,8 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 
 command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
-"set clipboard=unnamed   " yank to the system register (*) by default (osx only)
+"set clipboard=unnamed   " yank to the system register (*) by default
+set clipboard+=unnamedplus
 
 let g:ctrlp_extensions = ['smarttabs']
 
@@ -240,4 +241,5 @@ let g:haskell_enable_arrowsyntax = 1
 let g:haskell_enable_pattern_synonyms = 1
 let g:haskell_enable_typeroles = 1
 let g:haskell_enable_static_pointers = 1
+
 
