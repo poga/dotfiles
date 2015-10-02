@@ -26,7 +26,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Raimondi/delimitMate'
+Bundle 'jiangmiao/auto-pairs'
 " install YCM with ./install.sh --omnisharp-completer
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mileszs/ack.vim'
