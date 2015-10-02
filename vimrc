@@ -68,16 +68,13 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'junegunn/seoul256.vim'
 Bundle 'morhetz/gruvbox'
+Bundle 'w0ng/vim-hybrid'
 
 " Rust
 Bundle 'rust-lang/rust.vim'
 
 " TOML
 Bundle 'cespare/vim-toml'
-
-Bundle 'elixir-lang/vim-elixir'
-
-Bundle 'lambdatoast/elm.vim'
 
 filetype plugin indent on
 
@@ -93,7 +90,7 @@ imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
-colorscheme seoul256
+colorscheme hybrid
 
 set t_Co=256
 set cursorline
@@ -241,5 +238,4 @@ let g:haskell_enable_arrowsyntax = 1
 let g:haskell_enable_pattern_synonyms = 1
 let g:haskell_enable_typeroles = 1
 let g:haskell_enable_static_pointers = 1
-
 
