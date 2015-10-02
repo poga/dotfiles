@@ -1,5 +1,3 @@
-" Set NeoVim python version
-let g:python_host_prog='/usr/bin/python2'
 " Check if Vundle installed
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
