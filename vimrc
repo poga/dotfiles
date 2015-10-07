@@ -72,6 +72,7 @@ Bundle 'w0ng/vim-hybrid'
 
 " Rust
 Bundle 'rust-lang/rust.vim'
+Bundle 'racer-rust/vim-racer'
 
 " TOML
 Bundle 'cespare/vim-toml'
@@ -240,3 +241,7 @@ let g:haskell_enable_typeroles = 1
 let g:haskell_enable_static_pointers = 1
 
 let g:syntastic_loc_list_height = 2
+
+set hidden
+let g:racer_cmd = "/Users/poga/projects/racer/target/release/racer"
+let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
