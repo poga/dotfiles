@@ -77,6 +77,8 @@ Bundle 'racer-rust/vim-racer'
 " TOML
 Bundle 'cespare/vim-toml'
 
+Bundle 'elixir-lang/vim-elixir'
+
 filetype plugin indent on
 
 " Some Linux distributions set filetype in /etc/vimrc.
@@ -91,7 +93,7 @@ imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
-colorscheme hybrid
+colorscheme seoul256
 
 set t_Co=256
 set cursorline
@@ -243,5 +245,3 @@ let g:haskell_enable_static_pointers = 1
 let g:syntastic_loc_list_height = 2
 
 set hidden
-let g:racer_cmd = "/Users/poga/projects/racer/target/release/racer"
-let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
