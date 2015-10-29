@@ -70,14 +70,14 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'morhetz/gruvbox'
 Bundle 'w0ng/vim-hybrid'
 
-" Rust
-Bundle 'rust-lang/rust.vim'
-Bundle 'racer-rust/vim-racer'
-
 " TOML
 Bundle 'cespare/vim-toml'
 
 Bundle 'elixir-lang/vim-elixir'
+
+Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
+
+Bundle 'leafo/moonscript-vim'
 
 filetype plugin indent on
 
