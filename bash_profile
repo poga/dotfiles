@@ -27,6 +27,7 @@ alias l='ls -al'
 alias ,,='cd ..'
 
 export EDITOR=vim
+alias vim=nvim
 
 # Git bash completion
 if [ -f ~/.git-completion.bash ]; then
