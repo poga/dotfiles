@@ -79,6 +79,10 @@ Bundle 'cespare/vim-toml'
 
 Bundle 'elixir-lang/vim-elixir'
 
+Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
+
+Bundle 'leafo/moonscript-vim'
+
 filetype plugin indent on
 
 " Some Linux distributions set filetype in /etc/vimrc.
