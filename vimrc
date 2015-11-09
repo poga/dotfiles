@@ -32,7 +32,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'mileszs/ack.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'dkprice/vim-easygrep'
+Bundle 'rking/ag.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
@@ -249,4 +249,3 @@ let g:haskell_enable_static_pointers = 1
 let g:syntastic_loc_list_height = 2
 
 set hidden
-let g:EasyGrepJumpToMatch = 0
