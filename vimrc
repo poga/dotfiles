@@ -83,6 +83,8 @@ Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
 
 Bundle 'leafo/moonscript-vim'
 
+Bundle 'kylef/apiblueprint.vim'
+
 filetype plugin indent on
 
 " Some Linux distributions set filetype in /etc/vimrc.
