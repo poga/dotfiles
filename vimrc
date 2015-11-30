@@ -85,6 +85,8 @@ Bundle 'leafo/moonscript-vim'
 
 Bundle 'kylef/apiblueprint.vim'
 
+Bundle 'PotatoesMaster/i3-vim-syntax'
+
 filetype plugin indent on
 
 " Some Linux distributions set filetype in /etc/vimrc.
