@@ -165,10 +165,11 @@ let g:rails_history_size = 10
 " When writing a file, if there are errors, have Syntastic plugin mark them
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
-
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['html'] }
+                     \ 'passive_filetypes': ['go','html'] }
 
 " Use ag in CtrlP
 if executable("ag")
@@ -216,7 +217,6 @@ au FileType go nmap gi <Plug>(go-info)
 au FileType go nmap gd <Plug>(go-def-vertical)
 au FileType go nmap gs <Plug>(go-implements)
 au FileType go nmap gr <Plug>(go-rename)
-" Disable go import
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
