@@ -71,7 +71,7 @@ Bundle 'morhetz/gruvbox'
 Bundle 'w0ng/vim-hybrid'
 
 " Rust
-" Bundle 'rust-lang/rust.vim'
+Bundle 'rust-lang/rust.vim'
 " Bundle 'racer-rust/vim-racer'
 
 " TOML
