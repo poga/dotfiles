@@ -170,7 +170,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['go','html'] }
+                     \ 'passive_filetypes': ['html'] }
 
 " Use ag in CtrlP
 if executable("ag")
