@@ -254,3 +254,6 @@ let g:haskell_enable_static_pointers = 1
 let g:syntastic_loc_list_height = 2
 
 set hidden
+
+let g:airline_powerline_fonts = 1
+let g:gruvbox_contrast = 'hard'
