@@ -170,13 +170,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['html'] }
+                     \ 'passive_filetypes': ['go','html'] }
 
 " Ignore .gitignore in CtrlP
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " == Mapping
 nnoremap ; :
+
+nnoremap <F9> :SyntasticCheck<cr>
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -221,6 +223,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
