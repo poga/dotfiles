@@ -33,3 +33,7 @@ alias vim=nvim
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
