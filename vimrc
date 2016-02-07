@@ -21,35 +21,40 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-endwise'
 Bundle 'bling/vim-airline'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jiangmiao/auto-pairs'
-" install YCM with ./install.sh --omnisharp-completer
+" install YCM with ./install.sh
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mileszs/ack.vim'
 Bundle 'chriskempson/base16-vim'
-Bundle 'digitaltoad/vim-jade'
 Bundle 'rking/ag.vim'
-Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
-Bundle 'exu/pgsql.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
 
+" Language Support
+Bundle 'exu/pgsql.vim'
+Bundle 'cespare/vim-toml'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
+Bundle 'leafo/moonscript-vim'
+Bundle 'kylef/apiblueprint.vim'
+Bundle 'PotatoesMaster/i3-vim-syntax'
+
+" ruby & rails
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'rust-lang/rust.vim'
+
 " CSS
 Bundle 'ap/vim-css-color'
-
-" Golang
-Bundle 'fatih/vim-go'
-
-" Haskell
-Bundle 'neovimhaskell/haskell-vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
 
 " Javascript & LiveScript & CoffeeScript
 Bundle 'othree/yajs.vim'
@@ -60,6 +65,12 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mtscout6/vim-cjsx'
 
+" Golang
+Bundle 'fatih/vim-go'
+
+" Haskell
+Bundle 'neovimhaskell/haskell-vim'
+
 " Theme
 Bundle 'sickill/vim-monokai'
 Bundle 'fatih/molokai'
@@ -69,23 +80,6 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'junegunn/seoul256.vim'
 Bundle 'morhetz/gruvbox'
 Bundle 'w0ng/vim-hybrid'
-
-" Rust
-Bundle 'rust-lang/rust.vim'
-" Bundle 'racer-rust/vim-racer'
-
-" TOML
-Bundle 'cespare/vim-toml'
-
-Bundle 'elixir-lang/vim-elixir'
-
-Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
-
-Bundle 'leafo/moonscript-vim'
-
-Bundle 'kylef/apiblueprint.vim'
-
-Bundle 'PotatoesMaster/i3-vim-syntax'
 
 filetype plugin indent on
 
