@@ -128,6 +128,8 @@ set tabstop=2
 set expandtab
 set fencs=utf-8,big5,bgk,euc-jp,utf-16le
 
+highlight Comment cterm=italic
+
 set laststatus=2
 
 " == autocmd

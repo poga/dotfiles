@@ -1,6 +1,5 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export TERM=xterm-256color
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
