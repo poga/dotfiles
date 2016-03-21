@@ -147,6 +147,8 @@ autocmd FileType ls setlocal shiftwidth=4 tabstop=4
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
+autocmd FileType c setlocal shiftwidth=4 tabstop=4
+autocmd FileType ruby set nocursorline
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 "
