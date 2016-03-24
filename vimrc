@@ -1,3 +1,7 @@
+" Set VIM's shell variable to a different shell,
+" see https://github.com/fatih/vim-go/wiki/FAQ-Troubleshooting#go-tools-use-a-different-gopath-than-what-vim-started-with
+set shell=/bin/sh
+
 " Check if Vundle installed
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -166,6 +170,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 nnoremap ; :
 
 nnoremap <F9> :SyntasticCheck<cr>
+
+map <C-[> :tabprevious<cr>
+map <C-]> :tabnext<cr>
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
