@@ -98,7 +98,7 @@ imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
-colorscheme gruvbox
+colorscheme hybrid
 
 set t_Co=256
 set cursorline
@@ -211,6 +211,7 @@ au FileType go nmap gi <Plug>(go-info)
 au FileType go nmap gd <Plug>(go-def-vertical)
 au FileType go nmap gs <Plug>(go-implements)
 au FileType go nmap gr <Plug>(go-rename)
+au Filetype go nmap <F9> <Plug>(go-build)
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
