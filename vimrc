@@ -163,8 +163,7 @@ let g:mapleader=","
 let g:EasyMotion_leader_key = '<Leader>'
 let g:rails_history_size = 10
 
-" Ignore .gitignore in CtrlP
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " == Mapping
 nnoremap ; :
