@@ -259,3 +259,5 @@ let g:neomake_javascript_enabled_makers = ['standard']
 autocmd! BufWritePost * Neomake
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
+highligh javascriptBoolean cterm=italic ctermfg=150 gui=italic
+highligh javascriptFuncArg cterm=italic ctermfg=150 gui=italic
