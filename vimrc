@@ -66,8 +66,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
 Bundle 'othree/vim-jsx'
 Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'mtscout6/vim-cjsx'
 
 " Golang
 Bundle 'fatih/vim-go'
@@ -255,8 +253,9 @@ let g:ycm_rust_src_path = '/Users/poga/projects/rustc-1.8.0/src'
 
 let g:AutoPairsMultilineClose=0
 
-highlight htmlArg gui=italic
-highlight htmlArg cterm=italic
+highlight htmlArg gui=italic cterm=italic
 
 let g:neomake_javascript_enabled_makers = ['standard']
 autocmd! BufWritePost * Neomake
+
+highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
