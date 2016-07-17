@@ -100,8 +100,7 @@ imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
-" colorscheme hybrid
-colorscheme kolor
+colorscheme hybrid
 
 set t_Co=256
 set cursorline
