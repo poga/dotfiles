@@ -39,6 +39,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
+Bundle 'neomake/neomake'
 
 " Language Support
 Bundle 'exu/pgsql.vim'
@@ -83,6 +84,7 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'junegunn/seoul256.vim'
 Bundle 'morhetz/gruvbox'
 Bundle 'w0ng/vim-hybrid'
+Bundle 'zeis/vim-kolor'
 
 filetype plugin indent on
 
@@ -98,7 +100,8 @@ imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
-colorscheme hybrid
+" colorscheme hybrid
+colorscheme kolor
 
 set t_Co=256
 set cursorline
@@ -146,7 +149,7 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType ls setlocal shiftwidth=4 tabstop=4
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
@@ -163,7 +166,7 @@ let g:mapleader=","
 let g:EasyMotion_leader_key = '<Leader>'
 let g:rails_history_size = 10
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " == Mapping
 nnoremap ; :
@@ -248,3 +251,13 @@ set hidden
 
 let g:airline_powerline_fonts = 1
 let g:gruvbox_contrast = 'hard'
+
+let g:ycm_rust_src_path = '/Users/poga/projects/rustc-1.8.0/src'
+
+let g:AutoPairsMultilineClose=0
+
+highlight htmlArg gui=italic
+highlight htmlArg cterm=italic
+
+let g:neomake_javascript_enabled_makers = ['standard']
+autocmd! BufWritePost * Neomake
