@@ -53,7 +53,9 @@ Bundle 'PotatoesMaster/i3-vim-syntax'
 " ruby & rails
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
+
 Bundle 'rust-lang/rust.vim'
+Bundle 'racer-rust/vim-racer'
 
 " CSS
 Bundle 'ap/vim-css-color'
@@ -64,8 +66,10 @@ Bundle 'wavded/vim-stylus'
 Bundle 'othree/yajs.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
-Bundle 'othree/vim-jsx'
 Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+Bundle 'ternjs/tern_for_vim'
 
 " Golang
 Bundle 'fatih/vim-go'
@@ -118,6 +122,7 @@ set noswapfile
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
 set foldnestmax=3
+set autowrite
 
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
@@ -217,6 +222,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
 
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
@@ -256,8 +264,18 @@ let g:AutoPairsMultilineClose=0
 highlight htmlArg gui=italic cterm=italic
 
 let g:neomake_javascript_enabled_makers = ['standard']
+let g:neomake_jsx_enabled_makers = ['standard']
 autocmd! BufWritePost * Neomake
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
 highligh javascriptFuncArg cterm=italic ctermfg=215 gui=italic
+highligh javascriptNull cterm=italic ctermfg=131 gui=italic
+" JSX attribute
+highligh xmlAttrib cterm=italic ctermfg=215 gui=italic
+
+let g:jsx_ext_required = 0
+
+let g:racer_cmd = "/Users/poga/.cargo/bin/racer"
+let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
+
