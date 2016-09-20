@@ -174,9 +174,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 nnoremap ; :
 
 nnoremap <F9> :SyntasticCheck<cr>
-
-map <C-[> :tabprevious<cr>
-map <C-]> :tabnext<cr>
+nnoremap <ESC> :noh<cr><ESC>
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -279,3 +277,5 @@ let g:jsx_ext_required = 0
 let g:racer_cmd = "/Users/poga/.cargo/bin/racer"
 let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
 
+" close vim if NERDTree is the only opened buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
