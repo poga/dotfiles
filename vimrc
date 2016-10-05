@@ -105,7 +105,8 @@ set background=dark
 colorscheme hybrid
 
 set t_Co=256
-set cursorline
+" removed since it has huge performance impact
+" set cursorline
 set autoread
 set fillchars-=vert:\|
 set nofoldenable    " disable folding
