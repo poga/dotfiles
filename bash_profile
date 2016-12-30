@@ -36,3 +36,7 @@ fi
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
+
+source $HOME/.cargo/env
+
+export RUST_SRC_PATH=~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src

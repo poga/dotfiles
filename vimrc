@@ -277,7 +277,7 @@ highligh xmlAttrib cterm=italic ctermfg=215 gui=italic
 let g:jsx_ext_required = 0
 
 let g:racer_cmd = "/Users/poga/.cargo/bin/racer"
-let $RUST_SRC_PATH="/Users/poga/projects/rust/src/"
+let g:racer_experimental_completer = 1
 
 " close vim if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
