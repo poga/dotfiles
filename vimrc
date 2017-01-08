@@ -226,6 +226,7 @@ let g:go_highlight_extra_types = 1
 function! neomake#makers#ft#go#EnabledMakers()
     return ['go', 'govet']
 endfunction
+let g:neomake_rust_enabled_makers = ['cargo']
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
