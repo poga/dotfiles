@@ -17,7 +17,7 @@ function git_since_last_commit {
     echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
 }
 
-export PS1="\n[\w] \$(git_branch)\$(git_since_last_commit) 🐱  "
+export PS1="\n[\w] \$(git_branch)\$(git_since_last_commit)🐱  "
 
 # Alias
 alias g='git'
