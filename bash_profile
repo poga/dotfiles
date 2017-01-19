@@ -17,7 +17,12 @@ function git_since_last_commit {
     echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
 }
 
-export PS1="\n[\w] \$(git_branch)\$(git_since_last_commit)🐱  "
+GREEN="\[$(tput setaf 2)\]"
+YELLOW="\[$(tput setaf 3)\]"
+RED="\[$(tput setaf 1)\]"
+RESET="\[$(tput sgr0)\]"
+
+export PS1="\n[${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}🐱  "
 
 # Alias
 alias g='git'
