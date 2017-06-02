@@ -35,12 +35,12 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
 Bundle 'neomake/neomake'
 
+" ======
 " Language Support
 Bundle 'exu/pgsql.vim'
 Bundle 'cespare/vim-toml'
@@ -50,19 +50,16 @@ Bundle 'leafo/moonscript-vim'
 Bundle 'kylef/apiblueprint.vim'
 Bundle 'PotatoesMaster/i3-vim-syntax'
 
-" ruby & rails
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 
 Bundle 'rust-lang/rust.vim'
 Bundle 'racer-rust/vim-racer'
 
-" CSS
 Bundle 'ap/vim-css-color'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 
-" Javascript & LiveScript & CoffeeScript
 Bundle 'othree/yajs.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
@@ -71,12 +68,11 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'ternjs/tern_for_vim'
 
-" Golang
 Bundle 'fatih/vim-go'
 
-" Haskell
 Bundle 'neovimhaskell/haskell-vim'
 
+" ======
 " Theme
 Bundle 'sickill/vim-monokai'
 Bundle 'fatih/molokai'
