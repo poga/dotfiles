@@ -38,7 +38,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
-Bundle 'neomake/neomake'
+Bundle 'w0rp/ale'
 
 " ======
 " Language Support
@@ -219,11 +219,6 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 
-function! neomake#makers#ft#go#EnabledMakers()
-    return ['go', 'govet']
-endfunction
-let g:neomake_rust_enabled_makers = []
-let g:rustfmt_autosave = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
 autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
@@ -261,10 +256,6 @@ let g:AutoPairsMultilineClose=0
 
 highlight htmlArg gui=italic cterm=italic
 
-let g:neomake_javascript_enabled_makers = ['standard']
-let g:neomake_jsx_enabled_makers = ['standard']
-autocmd! BufWritePost * Neomake
-
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
 highligh javascriptFuncArg cterm=italic ctermfg=215 gui=italic
@@ -279,3 +270,14 @@ let g:racer_experimental_completer = 1
 
 " close vim if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Ale
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['standard']
+\}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
