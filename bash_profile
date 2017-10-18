@@ -46,3 +46,7 @@ source $HOME/.cargo/env
 export PATH=$PATH:~/.local/bin
 
 export RUST_SRC_PATH=~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
+
+export PATH="/Users/poga/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

@@ -33,12 +33,13 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'mileszs/ack.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'rking/ag.vim'
+Bundle 'jremmen/vim-ripgrep'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
-Bundle 'w0rp/ale'
+" Bundle 'w0rp/ale'
 
 " ======
 " Language Support
@@ -49,17 +50,13 @@ Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
 Bundle 'leafo/moonscript-vim'
 Bundle 'kylef/apiblueprint.vim'
 Bundle 'PotatoesMaster/i3-vim-syntax'
-
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
-
 Bundle 'rust-lang/rust.vim'
 Bundle 'racer-rust/vim-racer'
-
 Bundle 'ap/vim-css-color'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
-
 Bundle 'othree/yajs.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
@@ -67,10 +64,9 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'ternjs/tern_for_vim'
-
 Bundle 'fatih/vim-go'
-
 Bundle 'neovimhaskell/haskell-vim'
+Bundle 'rhysd/vim-wasm'
 
 " ======
 " Theme
@@ -120,6 +116,7 @@ set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
 set foldnestmax=3
 set autowrite
+set mouse=a
 
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
@@ -203,7 +200,10 @@ au BufRead,BufNewFile .tern-project set filetype=json
 
 " == vim-go
 " disable vim-go's error on save
-let g:go_fmt_fail_silently = 1
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
 " show variable type with gi
 au FileType go nmap gi <Plug>(go-info)
 " goto declaration with gd
@@ -211,7 +211,6 @@ au FileType go nmap gd <Plug>(go-def-vertical)
 au FileType go nmap gs <Plug>(go-implements)
 au FileType go nmap gr <Plug>(go-rename)
 au Filetype go nmap <F9> <Plug>(go-build)
-let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -272,9 +271,12 @@ let g:racer_experimental_completer = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Ale
-
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'javascript': ['standard'],
+\   'html': ['tidy']
 \}
 let g:ale_fixers = {
 \   'javascript': ['standard']
