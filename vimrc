@@ -62,7 +62,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'gkz/vim-ls'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'mxw/vim-jsx'
+Bundle 'MaxMEllon/vim-jsx-pretty'
 Bundle 'ternjs/tern_for_vim'
 Bundle 'fatih/vim-go'
 Bundle 'neovimhaskell/haskell-vim'
@@ -99,6 +99,9 @@ colorscheme hybrid
 set t_Co=256
 " removed since it has huge performance impact
 " set cursorline
+set nocursorcolumn
+syntax sync minlines=256
+set re=1
 set autoread
 set fillchars-=vert:\|
 set nofoldenable    " disable folding

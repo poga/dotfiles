@@ -7,8 +7,7 @@ function git_branch {
 }
 
 function git_since_last_commit {
-    now=`date +%s`;
-    last_commit=$(git log --pretty=format:%at -1 2> /dev/null) || return;
+    now=`date +%s`; last_commit=$(git log --pretty=format:%at -1 2> /dev/null) || return;
     seconds_since_last_commit=$((now-last_commit));
     minutes_since_last_commit=$((seconds_since_last_commit/60));
     hours_since_last_commit=$((minutes_since_last_commit/60));
@@ -22,7 +21,7 @@ YELLOW="\[$(tput setaf 3)\]"
 RED="\[$(tput setaf 1)\]"
 RESET="\[$(tput sgr0)\]"
 
-export PS1="\n[${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}🐱  "
+export PS1="\n[${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
 
 # Alias
 alias g='git'
@@ -50,3 +49,5 @@ export RUST_SRC_PATH=~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib
 export PATH="/Users/poga/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export LC_CTYPE="en_US.UTF-8"
