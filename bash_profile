@@ -51,3 +51,14 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export LC_CTYPE="en_US.UTF-8"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
+
+alias ls='exa'
+
+# added by Anaconda3 5.1.0 installer
+export PATH="/Users/poga/anaconda3/bin:$PATH"
