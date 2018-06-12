@@ -29,7 +29,15 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jiangmiao/auto-pairs'
 " install YCM with ./install.sh
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
+if has('nvim')
+  Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Bundle 'Shougo/deoplete.nvim'
+  Bundle 'roxma/nvim-yarp'
+  Bundle 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 Bundle 'mileszs/ack.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'rking/ag.vim'
@@ -39,7 +47,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
-" Bundle 'w0rp/ale'
+Bundle 'w0rp/ale'
 
 " ======
 " Language Support
