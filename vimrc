@@ -37,7 +37,6 @@ else
   Bundle 'roxma/nvim-yarp'
   Bundle 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
 Bundle 'mileszs/ack.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'rking/ag.vim'
@@ -264,14 +263,17 @@ let g:ycm_rust_src_path = '/Users/poga/projects/rustc-1.8.0/src'
 
 let g:AutoPairsMultilineClose=0
 
+" italic syntax
 highlight htmlArg gui=italic cterm=italic
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
 highligh javascriptFuncArg cterm=italic ctermfg=215 gui=italic
 highligh javascriptNull cterm=italic ctermfg=131 gui=italic
+highligh jsOperatorKeyword cterm=italic ctermfg=131 gui=italic
 " JSX attribute
 highligh xmlAttrib cterm=italic ctermfg=215 gui=italic
+highligh jsxAttrib cterm=italic ctermfg=215 gui=italic
 
 let g:jsx_ext_required = 0
 
@@ -294,3 +296,7 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"

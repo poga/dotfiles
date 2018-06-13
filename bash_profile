@@ -62,3 +62,4 @@ alias ls='exa'
 
 # added by Anaconda3 5.1.0 installer
 export PATH="/Users/poga/anaconda3/bin:$PATH"
+export PATH=$PATH:$HOME/.conduit/bin
