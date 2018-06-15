@@ -272,8 +272,9 @@ highligh javascriptFuncArg cterm=italic ctermfg=215 gui=italic
 highligh javascriptNull cterm=italic ctermfg=131 gui=italic
 highligh jsOperatorKeyword cterm=italic ctermfg=131 gui=italic
 " JSX attribute
-highligh xmlAttrib cterm=italic ctermfg=215 gui=italic
-highligh jsxAttrib cterm=italic ctermfg=215 gui=italic
+highligh xmlAttrib cterm=italic ctermfg=166 gui=italic
+highligh jsxAttrib cterm=italic ctermfg=166 gui=italic
+highligh jsxTag ctermfg=107
 
 let g:jsx_ext_required = 0
 
