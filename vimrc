@@ -30,13 +30,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'jiangmiao/auto-pairs'
 " install YCM with ./install.sh
 " Bundle 'Valloric/YouCompleteMe'
-if has('nvim')
-  Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Bundle 'Shougo/deoplete.nvim'
-  Bundle 'roxma/nvim-yarp'
-  Bundle 'roxma/vim-hug-neovim-rpc'
-endif
 Bundle 'mileszs/ack.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'rking/ag.vim'
@@ -47,9 +40,19 @@ Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
 Bundle 'w0rp/ale'
+Bundle 'ervandew/supertab'
+
+" run bash install.sh manually
+Bundle 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " ======
 " Language Support
+Bundle 'tbastos/vim-lua'
 Bundle 'exu/pgsql.vim'
 Bundle 'cespare/vim-toml'
 Bundle 'elixir-lang/vim-elixir'
@@ -60,7 +63,6 @@ Bundle 'PotatoesMaster/i3-vim-syntax'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'rust-lang/rust.vim'
-Bundle 'racer-rust/vim-racer'
 Bundle 'ap/vim-css-color'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
@@ -74,6 +76,8 @@ Bundle 'ternjs/tern_for_vim'
 Bundle 'fatih/vim-go'
 Bundle 'neovimhaskell/haskell-vim'
 Bundle 'rhysd/vim-wasm'
+Bundle 'wlangstroth/vim-racket'
+Bundle 'rhysd/vim-llvm'
 
 " ======
 " Theme
@@ -278,9 +282,6 @@ highligh jsxTag ctermfg=107
 
 let g:jsx_ext_required = 0
 
-let g:racer_cmd = "/Users/poga/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-
 " close vim if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -298,6 +299,18 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 
+
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ }
+
+" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
