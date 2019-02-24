@@ -40,7 +40,6 @@ Bundle 'vim-scripts/Align'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 Bundle 'mhinz/vim-startify'
 Bundle 'w0rp/ale'
-Bundle 'ervandew/supertab'
 
 " run bash install.sh manually
 Bundle 'autozimu/LanguageClient-neovim', {
@@ -297,7 +296,7 @@ let g:ale_fixers = {
 \   'javascript': ['standard']
 \}
 let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 
 
 let g:deoplete#enable_at_startup = 1
@@ -307,6 +306,9 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
+    \ 'cpp': ['/usr/local/bin/cquery',
+    \         '--log-file=/tmp/cq.log',
+    \         '--init={"cacheDirectory":"/var/cquery/"}']
     \ }
 
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -314,3 +316,11 @@ let g:LanguageClient_serverCommands = {
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
