@@ -1,107 +1,82 @@
-" Set VIM's shell variable to a different shell,
-" see https://github.com/fatih/vim-go/wiki/FAQ-Troubleshooting#go-tools-use-a-different-gopath-than-what-vim-started-with
-set shell=/bin/sh
-
-" Check if Vundle installed
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-  let iCanHazVundle=0
+" auto-install vim-plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
 endif
+call plug#begin('~/.config/nvim/plugged')
 
-" Vundle Bundles
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" vim-plugs
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-endwise'
+Plug 'bling/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+Plug 'chriskempson/base16-vim'
+Plug 'jremmen/vim-ripgrep'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/Align'
+Plug 'DavidEGx/ctrlp-smarttabs'
+Plug 'mhinz/vim-startify'
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-endwise'
-Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jiangmiao/auto-pairs'
-" install YCM with ./install.sh
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'mileszs/ack.vim'
-Bundle 'chriskempson/base16-vim'
-Bundle 'rking/ag.vim'
-Bundle 'jremmen/vim-ripgrep'
-Bundle 'tpope/vim-surround'
-" Bundle 'Yggdroot/indentLine'
-Bundle 'vim-scripts/Align'
-Bundle 'DavidEGx/ctrlp-smarttabs'
-Bundle 'mhinz/vim-startify'
-Bundle 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " run bash install.sh manually
-Bundle 'autozimu/LanguageClient-neovim', {
+Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-
-Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'junegunn/fzf'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " ======
 " Language Support
-Bundle 'tbastos/vim-lua'
-Bundle 'exu/pgsql.vim'
-Bundle 'cespare/vim-toml'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'nginx/nginx', {'rtp': 'contrib/vim/'}
-Bundle 'leafo/moonscript-vim'
-Bundle 'kylef/apiblueprint.vim'
-Bundle 'PotatoesMaster/i3-vim-syntax'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'rust-lang/rust.vim'
-Bundle 'ap/vim-css-color'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'wavded/vim-stylus'
-Bundle 'othree/yajs.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'gkz/vim-ls'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'MaxMEllon/vim-jsx-pretty'
-Bundle 'ternjs/tern_for_vim'
-Bundle 'fatih/vim-go'
-Bundle 'neovimhaskell/haskell-vim'
-Bundle 'rhysd/vim-wasm'
-Bundle 'wlangstroth/vim-racket'
-Bundle 'rhysd/vim-llvm'
+Plug 'tbastos/vim-lua'
+Plug 'exu/pgsql.vim'
+Plug 'cespare/vim-toml'
+Plug 'elixir-lang/vim-elixir'
+Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
+Plug 'leafo/moonscript-vim'
+Plug 'kylef/apiblueprint.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'rust-lang/rust.vim'
+Plug 'ap/vim-css-color'
+Plug 'digitaltoad/vim-jade'
+Plug 'wavded/vim-stylus'
+Plug 'othree/yajs.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'gkz/vim-ls'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'ternjs/tern_for_vim'
+Plug 'rhysd/vim-wasm'
+Plug 'wlangstroth/vim-racket'
+Plug 'rhysd/vim-llvm'
 
 " ======
 " Theme
-Bundle 'sickill/vim-monokai'
-Bundle 'fatih/molokai'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'junegunn/seoul256.vim'
-Bundle 'morhetz/gruvbox'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'zeis/vim-kolor'
+Plug 'sickill/vim-monokai'
+Plug 'fatih/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'nanotech/jellybeans.vim'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
+Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
+Plug 'zeis/vim-kolor'
+call plug#end()
 
-filetype plugin indent on
-
-" Some Linux distributions set filetype in /etc/vimrc.
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-imap jj <ESC>
-imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
 let g:seoul256_background = 233
 set background=dark
 colorscheme hybrid
@@ -143,9 +118,10 @@ set tabstop=2
 set expandtab
 set fencs=utf-8,big5,bgk,euc-jp,utf-16le
 
-highlight Comment cterm=italic
-
 set laststatus=2
+"
+"set clipboard=unnamed   " yank to the system register (*) by default
+set clipboard+=unnamedplus
 
 " == autocmd
 " Remove trailing whitespaces before save
@@ -157,6 +133,12 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+" filetype-specified settings
+au BufRead,BufNewFile *.god set filetype=ruby
+au BufRead,BufNewFile *.rt set filetype=html
+au BufRead,BufNewFile .eslintrc set filetype=json
+au BufRead,BufNewFile .tern-project set filetype=json
+
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType ls setlocal shiftwidth=4 tabstop=4
@@ -164,20 +146,37 @@ autocmd FileType go setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
-autocmd FileType ruby set nocursorline
+autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
-"
+
+" javascript
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+
+
+
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+endif
+
+
+" ============
+" key mapping
+imap jj <ESC>
+imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
+
 " set leader to ,
 let mapleader=","
 let g:mapleader=","
-
 let g:EasyMotion_leader_key = '<Leader>'
-let g:rails_history_size = 10
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-" == Mapping
 nnoremap ; :
 
 nnoremap <F9> :SyntasticCheck<cr>
@@ -205,42 +204,8 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>vs :vsplit<cr>
 
-" Filetype settings
-au BufRead,BufNewFile *.god set filetype=ruby
-au BufRead,BufNewFile *.rt set filetype=html
-au BufRead,BufNewFile .eslintrc set filetype=json
-au BufRead,BufNewFile .tern-project set filetype=json
-
-" == vim-go
-" disable vim-go's error on save
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
-let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
-" show variable type with gi
-au FileType go nmap gi <Plug>(go-info)
-" goto declaration with gd
-au FileType go nmap gd <Plug>(go-def-vertical)
-au FileType go nmap gs <Plug>(go-implements)
-au FileType go nmap gr <Plug>(go-rename)
-au Filetype go nmap <F9> <Plug>(go-build)
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-
-autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
-
 command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
-"set clipboard=unnamed   " yank to the system register (*) by default
-set clipboard+=unnamedplus
 
 let g:ctrlp_extensions = ['smarttabs']
 
@@ -249,25 +214,16 @@ autocmd User Startified set buftype=
 autocmd User Startified AirlineRefresh
 let g:startify_change_to_dir = 0
 
-" Haskell
-let g:haskell_enable_quantification = 1
-let g:haskell_enable_recursivedo = 1
-let g:haskell_enable_arrowsyntax = 1
-let g:haskell_enable_pattern_synonyms = 1
-let g:haskell_enable_typeroles = 1
-let g:haskell_enable_static_pointers = 1
-
 set hidden
 
 let g:airline_powerline_fonts = 1
 let g:gruvbox_contrast = 'hard'
 
-let g:ycm_rust_src_path = '/Users/poga/projects/rustc-1.8.0/src'
-
 let g:AutoPairsMultilineClose=0
 
 " italic syntax
 highlight htmlArg gui=italic cterm=italic
+highlight Comment cterm=italic
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
@@ -298,7 +254,6 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 " let g:ale_completion_enabled = 1
 
-
 let g:deoplete#enable_at_startup = 1
 
 let g:LanguageClient_serverCommands = {
@@ -306,12 +261,17 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
+    \ 'go': ['bingo'],
     \ 'cpp': ['/usr/local/bin/cquery',
     \         '--log-file=/tmp/cq.log',
     \         '--init={"cacheDirectory":"/var/cquery/"}']
     \ }
 
-" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+let g:LanguageClient_rootMarkers = {
+        \ 'go': ['.git', 'go.mod'],
+        \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
