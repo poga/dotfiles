@@ -216,7 +216,6 @@ let g:startify_change_to_dir = 0
 
 set hidden
 
-let g:airline_powerline_fonts = 1
 let g:gruvbox_contrast = 'hard'
 
 let g:AutoPairsMultilineClose=0
