@@ -35,7 +35,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " ======
 " Language Support
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'tbastos/vim-lua'
 Plug 'exu/pgsql.vim'
 Plug 'cespare/vim-toml'
@@ -284,12 +283,3 @@ let col = col('.') - 1
 return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
-let g:go_fmt_command = "goimports"
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
