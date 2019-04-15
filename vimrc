@@ -247,7 +247,8 @@ let g:ale_linters = {
 \   'html': ['tidy']
 \}
 let g:ale_fixers = {
-\   'javascript': ['standard']
+\   'javascript': ['standard'],
+\   'go': ['goimports']
 \}
 let g:ale_fix_on_save = 1
 " let g:ale_completion_enabled = 1
