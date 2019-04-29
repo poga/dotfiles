@@ -104,6 +104,7 @@ set showmode		" Show current mode
 set foldnestmax=3
 set autowrite
 set mouse=a
+set smartcase
 
 " Complete options (disable preview scratch window, longest removed to aways show menu)
 set completeopt=menu,menuone
@@ -312,3 +313,4 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
   \ }
+
