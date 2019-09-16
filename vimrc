@@ -262,9 +262,8 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'go': ['bingo'],
-    \ 'cpp': ['/usr/local/bin/cquery',
-    \         '--log-file=/tmp/cq.log',
-    \         '--init={"cacheDirectory":"/var/cquery/"}']
+    \ 'c': ['/usr/local/opt/llvm/bin/clangd'],
+    \ 'cpp': ['/usr/local/opt/llvm/bin/clangd']
     \ }
 
 let g:LanguageClient_rootMarkers = {
