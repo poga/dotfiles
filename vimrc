@@ -22,7 +22,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/Align'
 Plug 'DavidEGx/ctrlp-smarttabs'
 Plug 'mhinz/vim-startify'
-Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf'
 
@@ -52,7 +51,6 @@ Plug 'ternjs/tern_for_vim'
 Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
-Plug 'arakashic/chromatica.nvim'
 
 " ======
 " Theme
@@ -245,21 +243,6 @@ let g:jsx_ext_required = 0
 " close vim if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Ale
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_sign_column_always = 1
-let g:ale_linters = {
-\   'javascript': ['standard'],
-\   'html': ['tidy']
-\}
-let g:ale_fixers = {
-\   'javascript': ['standard'],
-\   'go': ['goimports']
-\}
-let g:ale_fix_on_save = 1
-" let g:ale_completion_enabled = 1
-
 " use gotags for golang tagbar
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
@@ -386,9 +369,6 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-let g:chromatica#libclang_path='/usr/local/opt/llvm/lib'
-let g:chromatica#enable_at_startup=1
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
