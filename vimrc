@@ -85,7 +85,6 @@ set backspace=2
 set autoindent
 set smartindent
 set ruler
-set winblend=30
 set nowrap
 set nu
 set nobackup
@@ -399,8 +398,6 @@ let g:fzf_colors =
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-nmap <Leader>f :GFiles<CR>
-nmap <Leader>F :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>` :GFiles<CR>
