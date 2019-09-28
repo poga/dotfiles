@@ -8,7 +8,6 @@ call plug#begin('~/.config/nvim/plugged')
 " vim-plugs
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'bling/vim-airline'
@@ -20,10 +19,10 @@ Plug 'chriskempson/base16-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/Align'
-Plug 'DavidEGx/ctrlp-smarttabs'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " ======
 " Language Support
@@ -86,6 +85,7 @@ set backspace=2
 set autoindent
 set smartindent
 set ruler
+set winblend=30
 set nowrap
 set nu
 set nobackup
@@ -163,14 +163,6 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 
 
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-if executable('rg')
-  set grepprg=rg\ --color=never
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-endif
-
-
 " ============
 " key mapping
 imap jj <ESC>
@@ -200,9 +192,8 @@ nmap <s-tab> v<
 
 nmap <F5> :NERDTree<CR>
 
-nmap <Leader>` :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
-nmap <F8> :TagbarToggle<CR>
+nmap <F8> :Vista<CR>
 "
 " remap split and vsplit
 nnoremap <leader>s :split<cr>
@@ -210,8 +201,6 @@ nnoremap <leader>vs :vsplit<cr>
 
 command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
-
-let g:ctrlp_extensions = ['smarttabs']
 
 " vim-startify
 autocmd User Startified set buftype=
@@ -377,4 +366,71 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+let $FZF_DEFAULT_OPTS = '--layout=reverse'
+let g:fzf_layout = { 'window': 'call OpenFloatingWin()' }
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>` :GFiles<CR>
+
+function! OpenFloatingWin()
+  let height = &lines - 3
+  let width = float2nr(&columns - (&columns * 2 / 10))
+  let col = float2nr((&columns - width) / 2)
+
+  "Set the position, size, etc. of the floating window.
+  "The size configuration here may not be so flexible, and there's room for further improvement.
+  let opts = {
+        \ 'relative': 'editor',
+        \ 'row': height * 0.3,
+        \ 'col': col + 30,
+        \ 'width': width * 2 / 3,
+        \ 'height': height / 2
+        \ }
+
+  let buf = nvim_create_buf(v:false, v:true)
+  let win = nvim_open_win(buf, v:true, opts)
+
+  "Set Floating Window Highlighting
+  call setwinvar(win, '&winhl', 'Normal:Pmenu')
+
+  setlocal
+        \ buftype=nofile
+        \ nobuflisted
+        \ bufhidden=hide
+        \ nonumber
+        \ norelativenumber
+        \ signcolumn=no
 endfunction
