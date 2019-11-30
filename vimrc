@@ -50,6 +50,8 @@ Plug 'ternjs/tern_for_vim'
 Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 
 " ======
 " Theme

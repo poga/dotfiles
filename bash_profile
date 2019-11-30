@@ -61,3 +61,5 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then sour
 alias ls='exa'
 
 export PATH=$PATH:$HOME/.conduit/bin
+export PATH=$PATH:/Applications/Racket\ v7.5/bin
+export PATH=$PATH:/Applications/Julia-1.3.app/Contents/Resources/julia/bin
