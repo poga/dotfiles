@@ -59,7 +59,29 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then source '/U
 if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
 
 alias ls='exa'
+alias cat='bat'
 
 export PATH=$PATH:$HOME/.conduit/bin
 export PATH=$PATH:/Applications/Racket\ v7.5/bin
 export PATH=$PATH:/Applications/Julia-1.3.app/Contents/Resources/julia/bin
+export GOPATH=$HOME/projects/go
+
+export PATH=$PATH:$HOME/projects/go/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Wasmer
+export WASMER_DIR="/Users/poga/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+
+# gerbil
+export PATH=/usr/local/opt/gambit-scheme/current/bin:/usr/local/opt/gerbil-scheme/libexec/bin:$PATH
+export GERBIL_HOME=/usr/local/opt/gerbil-scheme/libexec

@@ -396,7 +396,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
-nmap <Leader>` :GFiles<CR>
+nmap <Leader>` :Files<CR>
 
 function! OpenFloatingWin()
   let height = &lines - 3
