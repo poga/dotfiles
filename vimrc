@@ -50,8 +50,12 @@ Plug 'ternjs/tern_for_vim'
 Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
+Plug 'hashivim/vim-terraform'
 Plug 'eraserhd/parinfer-rust', {'do':
         \  'cargo build --release'}
+
+Plug 'Shougo/vimproc.vim', {'do': 'make -f make_mac.mak'}
+Plug 'Quramy/tsuquyomi'
 
 " ======
 " Theme
@@ -427,3 +431,14 @@ function! OpenFloatingWin()
         \ norelativenumber
         \ signcolumn=no
 endfunction
+
+" fuzzy find files in the working directory (where you launched Vim from)
+nmap <leader>f :Files<cr>
+" fuzzy find lines in the current file
+nmap <leader>/ :BLines<cr>
+" fuzzy find an open buffer
+nmap <leader>b :Buffers<cr>
+" fuzzy find text in the working directory
+nmap <leader>r :Rg
+" fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
+nmap <leader>c :Commands<cr>
