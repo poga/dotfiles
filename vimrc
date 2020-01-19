@@ -54,6 +54,9 @@ Plug 'hashivim/vim-terraform'
 Plug 'eraserhd/parinfer-rust', {'do':
         \  'cargo build --release'}
 
+Plug 'Shougo/vimproc.vim', {'do': 'make -f make_mac.mak'}
+Plug 'Quramy/tsuquyomi'
+
 " ======
 " Theme
 Plug 'sickill/vim-monokai'
