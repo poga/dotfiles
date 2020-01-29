@@ -52,7 +52,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'hashivim/vim-terraform'
 
-Plug 'Shougo/vimproc.vim', {'do': 'make -f make_mac.mak'}
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Quramy/tsuquyomi'
 
 " ======
