@@ -51,8 +51,6 @@ Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'hashivim/vim-terraform'
-Plug 'eraserhd/parinfer-rust', {'do':
-        \  'cargo build --release'}
 
 Plug 'Shougo/vimproc.vim', {'do': 'make -f make_mac.mak'}
 Plug 'Quramy/tsuquyomi'
