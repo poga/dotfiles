@@ -1,2 +1,2 @@
 all:
-	ln -s ~/.vimrc $(readlink --canonicalize ./vimrc) && ln -s ~/.bash_profile $(readlink --canonicalize ./bash_profile)
+	ln -s ~/.vimrc $(readlink -f ./vimrc) && ln -s ~/.bash_profile $(readlink -f ./bash_profile)
