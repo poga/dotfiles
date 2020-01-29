@@ -1,2 +1,2 @@
 all:
-	ln -s ~/.vimrc $(readlink -f ./vimrc) && ln -s ~/.bash_profile $(readlink -f ./bash_profile)
+	ln -s $$(readlink -f ./vimrc) ~/.vimrc && ln -s $$(readlink -f ./bash_profile) ~/.bash_profile
