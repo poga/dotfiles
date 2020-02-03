@@ -87,5 +87,4 @@ export PATH=/usr/local/opt/gambit-scheme/current/bin:/usr/local/opt/gerbil-schem
 export GERBIL_HOME=/usr/local/opt/gerbil-scheme/libexec
 
 alias py='python3'
-
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
