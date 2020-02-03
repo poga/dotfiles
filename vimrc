@@ -74,14 +74,12 @@ let g:seoul256_background = 233
 set background=dark
 colorscheme hybrid
 
-set t_Co=256
 " removed since it has huge performance impact
 " set cursorline
 set nocursorcolumn
 syntax sync minlines=256
 set re=1
 set autoread
-set termguicolors
 set fillchars-=vert:\|
 set nofoldenable    " disable folding
 set nocp
