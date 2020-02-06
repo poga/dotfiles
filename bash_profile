@@ -21,7 +21,7 @@ YELLOW="\[$(tput setaf 3)\]"
 RED="\[$(tput setaf 1)\]"
 RESET="\[$(tput sgr0)\]"
 
-export PS1="\n[${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
+export PS1="\n[${GREEN}\h:\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
 
 # Alias
 alias g='git'
