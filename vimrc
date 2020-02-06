@@ -21,8 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/Align'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " ======
 " Language Support
