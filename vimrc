@@ -230,6 +230,9 @@ highligh xmlAttrib cterm=italic ctermfg=166 gui=italic,underline
 highligh jsxAttrib cterm=italic ctermfg=166 gui=italic
 highligh jsxTag ctermfg=107
 
+" TODO
+highligh Todo ctermfg=232 ctermbg=220 cterm=underline
+
 let g:jsx_ext_required = 0
 
 " close vim if NERDTree is the only opened buffer
