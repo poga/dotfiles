@@ -28,8 +28,6 @@ export PS1="\n[${GREEN}${BOLD}\h${RESET}:${GREEN}\w${RESET}] ${RED}\$(git_branch
 alias g='git'
 alias l='ls -al'
 
-alias ,,='cd ..'
-
 export EDITOR=vim
 alias vim=nvim
 
@@ -45,9 +43,11 @@ fi
 source $HOME/.cargo/env
 export PATH=$PATH:~/.local/bin
 
-export PATH="/Users/poga/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if [ -x "$(command -v pyenv)" ]; then
+  export PATH="/Users/poga/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 
 export LC_CTYPE="en_US.UTF-8"
 export LANG=en_US.UTF-8
@@ -58,8 +58,12 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then source '/U
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
 
-alias ls='exa'
-alias cat='bat'
+if [ -x "$(command -v exa)" ]; then
+  alias ls='exa'
+fi
+if [ -x "$(command -v bat)" ]; then
+  alias cat='bat'
+fi
 
 export PATH=$PATH:$HOME/.conduit/bin
 export PATH=$PATH:/Applications/Racket\ v7.5/bin
@@ -74,17 +78,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Wasmer
-export WASMER_DIR="/Users/poga/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 
-# gerbil
-export PATH=/usr/local/opt/gambit-scheme/current/bin:/usr/local/opt/gerbil-scheme/libexec/bin:$PATH
-export GERBIL_HOME=/usr/local/opt/gerbil-scheme/libexec
-
-alias py='python3'
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
