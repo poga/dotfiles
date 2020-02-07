@@ -75,8 +75,8 @@ let g:seoul256_background = 233
 set background=dark
 colorscheme hybrid
 
-" removed since it has huge performance impact
-" set cursorline
+set cursorline
+set relativenumber
 set nocursorcolumn
 syntax sync minlines=256
 set re=1
