@@ -217,16 +217,16 @@ let g:gruvbox_contrast = 'hard'
 let g:AutoPairsMultilineClose=0
 
 " italic syntax
-highlight htmlArg gui=italic cterm=italic
-highlight Comment cterm=italic ctermfg=249
+highlight htmlArg gui=italic cterm=italic,underline
+highlight Comment ctermfg=252 cterm=italic
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
-highligh javascriptFuncArg cterm=italic ctermfg=215 gui=italic
+highligh javascriptFuncArg cterm=italic ctermfg=215 gui=italic,underline
 highligh javascriptNull cterm=italic ctermfg=131 gui=italic
 highligh jsOperatorKeyword cterm=italic ctermfg=131 gui=italic
 " JSX attribute
-highligh xmlAttrib cterm=italic ctermfg=166 gui=italic
+highligh xmlAttrib cterm=italic ctermfg=166 gui=italic,underline
 highligh jsxAttrib cterm=italic ctermfg=166 gui=italic
 highligh jsxTag ctermfg=107
 
