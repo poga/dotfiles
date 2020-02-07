@@ -89,7 +89,7 @@ set autoindent
 set smartindent
 set ruler
 set nowrap
-set scrolloff
+set scrolloff=5
 set incsearch
 set nu
 set nobackup
