@@ -76,7 +76,6 @@ set background=dark
 colorscheme hybrid
 
 set cursorline
-set relativenumber
 set nocursorcolumn
 syntax sync minlines=256
 set re=1
