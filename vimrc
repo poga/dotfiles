@@ -218,7 +218,7 @@ let g:AutoPairsMultilineClose=0
 
 " italic syntax
 highlight htmlArg gui=italic cterm=italic
-highlight Comment cterm=italic
+highlight Comment cterm=italic ctermfg=7
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
