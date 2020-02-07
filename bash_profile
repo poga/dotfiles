@@ -52,6 +52,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export LC_CTYPE="en_US.UTF-8"
+export LANG=en_US.UTF-8
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/path.bash.inc'; fi
