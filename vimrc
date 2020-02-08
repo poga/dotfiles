@@ -54,6 +54,7 @@ Plug 'hashivim/vim-terraform'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Quramy/tsuquyomi'
+Plug 'fannheyward/coc-rust-analyzer'
 
 " ======
 " Theme
