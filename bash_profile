@@ -20,10 +20,11 @@ if [[ $- == *i* ]]; then
   GREEN="\[$(tput setaf 2)\]"
   YELLOW="\[$(tput setaf 3)\]"
   RED="\[$(tput setaf 1)\]"
+  BLUE="\[$(tput setaf 4)\]"
   BOLD="\[$(tput bold)\]"
   RESET="\[$(tput sgr0)\]"
 
-  export PS1="\n[${GREEN}${BOLD}\h${RESET}:${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
+  export PS1="\n[${BLUE}${BOLD}\h${RESET}:${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
 fi
 
 # Alias
