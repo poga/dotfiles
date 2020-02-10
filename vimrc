@@ -218,7 +218,7 @@ let g:AutoPairsMultilineClose=0
 
 " italic syntax
 highlight htmlArg gui=italic cterm=italic,underline
-highlight Comment ctermfg=252 cterm=italic
+highlight Comment ctermfg=2 cterm=italic
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
@@ -440,4 +440,7 @@ nmap <leader>r :Rg
 nmap <leader>c :Commands<cr>
 
 let g:airline#extensions#coc#enabled = 1
+
+set rtp+=/usr/local/opt/fzf
+
 
