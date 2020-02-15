@@ -66,7 +66,7 @@ if [ -x "$(command -v exa)" ]; then
   alias ls='exa'
 fi
 if [ -x "$(command -v bat)" ]; then
-  alias cat='bat'
+  alias cat='bat --style="changes"'
 fi
 
 export PATH=$PATH:$HOME/.conduit/bin

@@ -178,7 +178,7 @@ let g:mapleader=","
 let g:EasyMotion_leader_key = '<Leader>'
 
 nnoremap ; :
-
+noremap % v%
 nnoremap <ESC> :noh<cr><ESC>
 
 map <C-h> <C-w>h
@@ -399,12 +399,13 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>` :GitFiles<CR>
-nmap <Leader>r :Rg<CR>
-
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
+
+nmap <Leader>g :Rg<CR>
+
 
 function! OpenFloatingWin()
   let height = &lines - 3
