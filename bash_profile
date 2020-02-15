@@ -30,6 +30,7 @@ fi
 # Alias
 alias g='git'
 alias l='ls -al'
+alias py='python3'
 
 export EDITOR=vim
 alias vim=nvim
