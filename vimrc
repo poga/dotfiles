@@ -23,6 +23,7 @@ Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'liuchengxu/vista.vim'
 
 
 " ======
@@ -178,7 +179,6 @@ let g:EasyMotion_leader_key = '<Leader>'
 
 nnoremap ; :
 
-nnoremap <F9> :SyntasticCheck<cr>
 nnoremap <ESC> :noh<cr><ESC>
 
 map <C-h> <C-w>h
@@ -398,7 +398,13 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
-nmap <Leader>` :Files<CR>
+nmap <Leader>` :GitFiles<CR>
+nmap <Leader>r :Rg<CR>
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 function! OpenFloatingWin()
   let height = &lines - 3
