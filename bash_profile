@@ -70,7 +70,7 @@ if [ -x "$(command -v bat)" ]; then
 fi
 
 export PATH=$PATH:$HOME/.conduit/bin
-export PATH=$PATH:/Applications/Racket\ v7.5/bin
+export PATH=$PATH:/Applications/Racket\ v7.6/bin
 export PATH=$PATH:/Applications/Julia-1.3.app/Contents/Resources/julia/bin
 export GOPATH=$HOME/projects/go
 

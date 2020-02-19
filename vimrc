@@ -52,6 +52,7 @@ Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'hashivim/vim-terraform'
+Plug 'Raku/vim-raku'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Quramy/tsuquyomi'
