@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vista.vim'
+Plug 'jpalardy/vim-slime'
 
 
 " ======
@@ -452,3 +453,7 @@ let g:airline#extensions#coc#enabled = 1
 set rtp+=/usr/local/opt/fzf
 
 
+
+" Slime
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
