@@ -35,6 +35,8 @@ alias py='python3'
 export EDITOR=vim
 alias vim=nvim
 
+alias p6='perl6'
+
 # Git bash completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
