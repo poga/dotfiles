@@ -71,6 +71,13 @@ if [ -x "$(command -v bat)" ]; then
   alias cat='bat --style="changes"'
 fi
 
+if [ -x "$(command -v git)" ]; then
+  git config --global alias.co checkout
+  git config --global alias.ci commit
+  git config --global alias.st status
+  git config --global alias.br branch
+fi
+
 export PATH=$PATH:$HOME/.conduit/bin
 export PATH=$PATH:/Applications/Racket\ v7.6/bin
 export PATH=$PATH:/Applications/Julia-1.3.app/Contents/Resources/julia/bin
