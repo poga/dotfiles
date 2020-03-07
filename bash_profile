@@ -76,6 +76,10 @@ if [ -x "$(command -v git)" ]; then
   git config --global alias.ci commit
   git config --global alias.st status
   git config --global alias.br branch
+
+  git config --global user.name "Poga Po"
+  git config --global user.email poga.po@gmail.com
+  git config --global core.editor nvim
 fi
 
 export PATH=$PATH:$HOME/.conduit/bin
