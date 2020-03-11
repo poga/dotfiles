@@ -103,7 +103,7 @@ set showmode		" Show current mode
 set foldnestmax=3
 set autowrite
 set mouse=a
-set smartcase
+set ignorecase
 
 " Better display for messages
 set cmdheight=2
