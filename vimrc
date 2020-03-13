@@ -26,6 +26,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-repeat'
 
 
 " ======
