@@ -100,3 +100,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+if [ -x "$(command -v opam)" ]; then
+  eval $(opam env)
+  test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+fi
