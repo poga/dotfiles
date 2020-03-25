@@ -29,6 +29,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
+Plug 'luochen1990/rainbow'
 
 
 " ======
@@ -461,3 +462,5 @@ set rtp+=/usr/local/opt/fzf
 " Slime
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
+
+let g:rainbow_active = 1
