@@ -61,7 +61,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'Raku/vim-raku'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 
 " ======
