@@ -85,7 +85,7 @@ fi
 
 export PATH=$PATH:$HOME/.conduit/bin
 export PATH=$PATH:/Applications/Racket\ v7.6/bin
-export PATH=$PATH:/Applications/Julia-1.3.app/Contents/Resources/julia/bin
+export PATH=$PATH:/Applications/Julia-1.4.app/Contents/Resources/julia/bin
 export GOPATH=$HOME/projects/go
 export PATH=$PATH:/usr/local/go/bin
 
@@ -107,3 +107,4 @@ if [ -x "$(command -v opam)" ]; then
   eval $(opam env)
   test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 fi
+export PATH="/usr/local/opt/llvm/bin:$PATH"
