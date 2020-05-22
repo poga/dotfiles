@@ -59,6 +59,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'hashivim/vim-terraform'
 Plug 'Raku/vim-raku'
+Plug 'jdonaldson/vaxe'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'leafgarland/typescript-vim'
