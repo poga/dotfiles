@@ -30,6 +30,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'luochen1990/rainbow'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 
 " ======
@@ -65,6 +66,7 @@ Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'leafgarland/typescript-vim'
 Plug 'Olical/conjure', {'tag': 'v3.4.0'}
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'bakpakin/fennel.vim'
 
 " ======
 " Theme
@@ -156,6 +158,7 @@ au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
 au BufRead,BufNewFile .eslintrc set filetype=json
 au BufRead,BufNewFile .tern-project set filetype=json
+au BufRead,BufNewFile .cl set filetype=clojure
 
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -181,6 +184,9 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 " key mapping
 imap jj <ESC>
 imap <S-CR> <ESC>:execute 'normal o' . EndToken()<CR>O
+
+let maplocalleader = "\\"
+
 
 " set leader to ,
 let mapleader=","
@@ -469,3 +475,9 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 let g:rainbow_active = 1
 
 set re=0
+
+" clojure
+autocmd FileType clojure execute "silent! CocDisable"
+" autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
+autocmd BufLeave *.clj execute "silent! CocEnable"
+autocmd FileType clojure call deoplete#enable()
