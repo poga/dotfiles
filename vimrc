@@ -62,6 +62,7 @@ Plug 'Raku/vim-raku'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'leafgarland/typescript-vim'
+Plug 'Olical/conjure', {'tag': 'v3.4.0'}
 
 " ======
 " Theme
