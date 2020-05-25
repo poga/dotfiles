@@ -481,3 +481,9 @@ autocmd FileType clojure execute "silent! CocDisable"
 " autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
 autocmd BufLeave *.clj execute "silent! CocEnable"
 autocmd FileType clojure call deoplete#enable()
+
+" haxe
+autocmd FileType haxe execute "silent! CocDisable"
+" autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
+autocmd BufLeave *.hx execute "silent! CocEnable"
+autocmd FileType haxe call deoplete#enable()
