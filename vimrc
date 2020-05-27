@@ -139,6 +139,8 @@ set expandtab
 set fencs=utf-8,big5,bgk,euc-jp,utf-16le
 
 set laststatus=2
+set re=0
+
 "
 "set clipboard=unnamed   " yank to the system register (*) by default
 set clipboard+=unnamedplus
@@ -473,8 +475,6 @@ let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
 let g:rainbow_active = 1
-
-set re=0
 
 " clojure
 autocmd FileType clojure execute "silent! CocDisable"
