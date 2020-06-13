@@ -46,7 +46,9 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-source $HOME/.cargo/env
+if [ -x "$(command -v cargo)" ]; then
+  source $HOME/.cargo/env
+fi
 export PATH=$PATH:~/.local/bin
 
 if [ -x "$(command -v pyenv)" ]; then
