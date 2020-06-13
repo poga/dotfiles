@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/plugged')
 " vim-plugs
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'bling/vim-airline'
