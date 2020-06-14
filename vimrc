@@ -32,6 +32,7 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'luochen1990/rainbow'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'w0rp/ale'
 
 
 " ======
@@ -483,8 +484,14 @@ autocmd FileType clojure execute "silent! CocDisable"
 autocmd BufLeave *.clj execute "silent! CocEnable"
 autocmd FileType clojure call deoplete#enable()
 
+let g:ale_linters = {
+  \ 'clojure': ['clj-kondo', 'joker']
+  \}
+
 " haxe
 autocmd FileType haxe execute "silent! CocDisable"
 " autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
 autocmd BufLeave *.hx execute "silent! CocEnable"
 autocmd FileType haxe call deoplete#enable()
+
+
