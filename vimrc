@@ -37,6 +37,7 @@ Plug 'w0rp/ale'
 
 " ======
 " Language Support
+Plug 'fatih/vim-go'
 Plug 'tbastos/vim-lua'
 Plug 'exu/pgsql.vim'
 Plug 'cespare/vim-toml'
