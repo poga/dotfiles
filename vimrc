@@ -67,9 +67,11 @@ Plug 'jdonaldson/vaxe'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'leafgarland/typescript-vim'
-Plug 'Olical/conjure', {'tag': 'v3.4.0'}
+Plug 'Olical/conjure'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'bakpakin/fennel.vim'
+Plug 'bakpakin/janet.vim'
+
 
 " ======
 " Theme
