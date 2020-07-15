@@ -352,8 +352,11 @@ omap af <Plug>(coc-funcobj-a)
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
+" Call Format on save for rust
+
 " Use `:Fold` to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+autocmd BufWritePre * :call CocAction('format')
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
