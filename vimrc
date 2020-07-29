@@ -33,7 +33,7 @@ Plug 'tpope/vim-repeat'
 Plug 'luochen1990/rainbow'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
-
+Plug 'joom/latex-unicoder.vim'
 
 " ======
 " Language Support
