@@ -86,7 +86,7 @@ if [ -x "$(command -v git)" ]; then
 fi
 
 export PATH=$PATH:$HOME/.conduit/bin
-export PATH=$PATH:/Applications/Racket\ v7.7/bin
+export PATH=$PATH:/Applications/Racket\ v7.8/bin
 export PATH=$PATH:/Applications/Julia-1.4.app/Contents/Resources/julia/bin
 export GOPATH=$HOME/projects/go
 export PATH=$PATH:/usr/local/go/bin
