@@ -425,6 +425,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>` :GitFiles<CR>
+nmap <Leader>~ :Files<CR>
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
