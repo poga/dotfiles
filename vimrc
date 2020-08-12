@@ -483,8 +483,6 @@ set rtp+=/usr/local/opt/fzf
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
-let g:rainbow_active = 1
-
 " clojure
 autocmd FileType clojure execute "silent! CocDisable"
 " autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
@@ -501,4 +499,14 @@ autocmd FileType haxe execute "silent! CocDisable"
 autocmd BufLeave *.hx execute "silent! CocEnable"
 autocmd FileType haxe call deoplete#enable()
 
+let g:rainbow_conf = {
+\  'ctermfgs': [ 'green', 'yellow', 'darkblue', 'magenta', 'darkred'],
+\  'separately': {
+\    'css': 0,
+\    'yaml': 0,
+\    'racket': {
+\      'parentheses': ["start=/(/ end=/)/ fold", "start=/`(/ end=/)/ fold", "start=/'(/ end=/)/ fold", 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+    \}
+  \} }
 
+let g:rainbow_active = 1
