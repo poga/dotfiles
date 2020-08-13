@@ -500,7 +500,7 @@ autocmd BufLeave *.hx execute "silent! CocEnable"
 autocmd FileType haxe call deoplete#enable()
 
 let g:rainbow_conf = {
-\  'ctermfgs': [ 'green', 'yellow', 'darkblue', 'magenta', 'darkred'],
+\  'ctermfgs': [ 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
 \  'separately': {
 \    'css': 0,
 \    'yaml': 0,
