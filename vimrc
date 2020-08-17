@@ -510,3 +510,5 @@ let g:rainbow_conf = {
   \} }
 
 let g:rainbow_active = 1
+
+let g:coc_global_extensions = ['coc-rust-analyzer']
