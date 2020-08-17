@@ -31,7 +31,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'luochen1990/rainbow'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 Plug 'joom/latex-unicoder.vim'
 
@@ -63,7 +62,6 @@ Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'hashivim/vim-terraform'
 Plug 'Raku/vim-raku'
-Plug 'jdonaldson/vaxe'
 
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'leafgarland/typescript-vim'
@@ -483,21 +481,9 @@ set rtp+=/usr/local/opt/fzf
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
-" clojure
-autocmd FileType clojure execute "silent! CocDisable"
-" autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
-autocmd BufLeave *.clj execute "silent! CocEnable"
-autocmd FileType clojure call deoplete#enable()
-
 let g:ale_linters = {
   \ 'clojure': ['clj-kondo', 'joker']
   \}
-
-" haxe
-autocmd FileType haxe execute "silent! CocDisable"
-" autocmd BufNew,BufEnter *.clj let g:deoplete#enable_at_startup=1
-autocmd BufLeave *.hx execute "silent! CocEnable"
-autocmd FileType haxe call deoplete#enable()
 
 let g:rainbow_conf = {
 \  'ctermfgs': [ 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
