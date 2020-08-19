@@ -36,7 +36,6 @@ Plug 'joom/latex-unicoder.vim'
 
 " ======
 " Language Support
-Plug 'fatih/vim-go'
 Plug 'tbastos/vim-lua'
 Plug 'exu/pgsql.vim'
 Plug 'cespare/vim-toml'
@@ -497,4 +496,5 @@ let g:rainbow_conf = {
 
 let g:rainbow_active = 1
 
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 let g:coc_global_extensions = ['coc-rust-analyzer']
