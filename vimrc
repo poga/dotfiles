@@ -33,6 +33,7 @@ Plug 'tpope/vim-repeat'
 Plug 'luochen1990/rainbow'
 Plug 'w0rp/ale'
 Plug 'joom/latex-unicoder.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 " ======
 " Language Support
