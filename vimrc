@@ -362,6 +362,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
+" Show possible actions
+nnoremap <silent> <leader>z  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands
@@ -498,4 +500,4 @@ let g:rainbow_conf = {
 let g:rainbow_active = 1
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-let g:coc_global_extensions = ['coc-rust-analyzer']
+let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions']
