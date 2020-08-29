@@ -24,7 +24,6 @@ Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'liuchengxu/vista.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
@@ -106,7 +105,6 @@ set ruler
 set nowrap
 set scrolloff=5
 set incsearch
-set nu
 set nobackup
 set nowb
 set noswapfile
@@ -217,7 +215,8 @@ nmap <s-tab> v<
 nmap <F5> :NERDTree<CR>
 
 
-nmap <F8> :Vista<CR>
+nmap <F8> :TagbarToggle<CR>
+
 "
 " remap split and vsplit
 nnoremap <leader>s :split<cr>
