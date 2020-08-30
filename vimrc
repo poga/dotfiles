@@ -362,7 +362,12 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Show all diagnostics
 nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
 " Show possible actions
-nnoremap <silent> <leader>z  :<C-u>CocList diagnostics<cr>
+" Remap for do codeAction of selected region
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <silent> <leader>z :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+nmap <silent> <leader>z :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
 " Manage extensions
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands
