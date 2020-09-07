@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
 Plug 'chriskempson/base16-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-surround'
@@ -33,6 +34,7 @@ Plug 'luochen1990/rainbow'
 Plug 'w0rp/ale'
 Plug 'joom/latex-unicoder.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'machakann/vim-highlightedyank'
 
 " ======
 " Language Support
@@ -505,3 +507,10 @@ let g:rainbow_active = 1
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions']
+
+let g:gitgutter_sign_added = '┃'
+let g:gitgutter_sign_modified = '┃'
+let g:gitgutter_sign_removed = '┃'
+highlight GitGutterChange guifg=#bbbb00 ctermfg=58
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
