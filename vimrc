@@ -116,8 +116,6 @@ set foldnestmax=3
 set autowrite
 set mouse=a
 set ignorecase
-set lazyredraw
-set ttyfast
 
 " Better display for messages
 set cmdheight=2
