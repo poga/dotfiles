@@ -503,3 +503,5 @@ let g:gitgutter_sign_removed = '┃'
 highlight GitGutterChange guifg=#bbbb00 ctermfg=58
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
+let g:vaxe_enable_airline_defaults = 0
+
