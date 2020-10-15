@@ -57,7 +57,7 @@ Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'leafgarland/typescript-vim'
 Plug 'Olical/conjure'
 Plug 'HerringtonDarkholme/yats.vim'
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " ======
 " Theme
@@ -506,4 +506,3 @@ highlight GitGutterChange guifg=#bbbb00 ctermfg=58
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 let g:vaxe_enable_airline_defaults = 0
-
