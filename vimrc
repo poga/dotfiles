@@ -13,13 +13,12 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'chriskempson/base16-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/Align'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -41,36 +40,17 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tbastos/vim-lua'
 Plug 'exu/pgsql.vim'
 Plug 'cespare/vim-toml'
-Plug 'elixir-lang/vim-elixir'
 Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
-Plug 'leafo/moonscript-vim'
-Plug 'kylef/apiblueprint.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 Plug 'ap/vim-css-color'
-Plug 'digitaltoad/vim-jade'
 Plug 'wavded/vim-stylus'
-Plug 'othree/yajs.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'gkz/vim-ls'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'ternjs/tern_for_vim'
-Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
-Plug 'hashivim/vim-terraform'
-Plug 'Raku/vim-raku'
 Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'leafgarland/typescript-vim'
 Plug 'Olical/conjure'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'bakpakin/fennel.vim'
-Plug 'bakpakin/janet.vim'
-
+" Plug 'HerringtonDarkholme/yats.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " ======
 " Theme
@@ -116,6 +96,8 @@ set foldnestmax=3
 set autowrite
 set mouse=a
 set ignorecase
+set lazyredraw
+set ttyfast
 
 " Better display for messages
 set cmdheight=2
@@ -404,7 +386,7 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-let g:fzf_layout = { 'down': '~40%' }
+" let g:fzf_layout = { 'down': '~40%' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -508,11 +490,16 @@ let g:rainbow_conf = {
 let g:rainbow_active = 1
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions']
+let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions', 'coc-go']
 
 let g:gitgutter_sign_added = '┃'
 let g:gitgutter_sign_modified = '┃'
 let g:gitgutter_sign_removed = '┃'
+
+highlight GitGutterAdd guifg=#009900 ctermfg=22
 highlight GitGutterChange guifg=#bbbb00 ctermfg=58
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
+let g:vaxe_enable_airline_defaults = 0
+
+let g:highlightedyank_highlight_duration = 200
