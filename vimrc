@@ -44,19 +44,12 @@ Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
 Plug 'vim-ruby/vim-ruby'
 Plug 'ap/vim-css-color'
 Plug 'wavded/vim-stylus'
-Plug 'othree/yajs.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'rhysd/vim-wasm'
 Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'leafgarland/typescript-vim'
 Plug 'Olical/conjure'
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " ======
@@ -393,7 +386,7 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-let g:fzf_layout = { 'down': '~40%' }
+" let g:fzf_layout = { 'down': '~40%' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -495,7 +488,7 @@ let g:rainbow_conf = {
 let g:rainbow_active = 1
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions']
+let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions', 'coc-go']
 
 let g:gitgutter_sign_added = '┃'
 let g:gitgutter_sign_modified = '┃'
@@ -508,4 +501,3 @@ highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 let g:vaxe_enable_airline_defaults = 0
 
 let g:highlightedyank_highlight_duration = 200
-
