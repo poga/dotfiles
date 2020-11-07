@@ -49,8 +49,10 @@ Plug 'rhysd/vim-llvm'
 Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Olical/conjure'
-" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+
 
 " ======
 " Theme
