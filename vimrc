@@ -478,6 +478,8 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 let g:ale_linters = {
   \ 'clojure': ['clj-kondo', 'joker']
   \}
+let g:ale_linters_explicit = 1
+
 
 let g:rainbow_conf = {
 \  'ctermfgs': [ 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
