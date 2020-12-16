@@ -52,6 +52,7 @@ Plug 'Olical/conjure'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'kovisoft/slimv'
 
 
 " ======
