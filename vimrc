@@ -462,7 +462,7 @@ nmap <leader>b :Buffers<cr>
 " fuzzy find text in the working directory
 nmap <leader>r :Rg
 " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
-nmap <leader>c :Commands<cr>
+nmap <leader>C :Commands<cr>
 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
@@ -508,3 +508,5 @@ highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 let g:vaxe_enable_airline_defaults = 0
 
 let g:highlightedyank_highlight_duration = 200
+
+let g:slimv_repl_split=4
