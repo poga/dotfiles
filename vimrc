@@ -481,9 +481,8 @@ let g:ale_linters = {
   \}
 let g:ale_linters_explicit = 1
 
-
 let g:rainbow_conf = {
-\  'ctermfgs': [ 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
+\  'ctermfgs': [ 'darkgray', 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
 \  'separately': {
 \    'css': 0,
 \    'yaml': 0,
@@ -558,3 +557,6 @@ nmap <buffer> >(  <Plug>(sexp_emit_head_element)
 nmap <buffer> <)  <Plug>(sexp_emit_tail_element)
 nmap <buffer> <(  <Plug>(sexp_capture_prev_element)
 nmap <buffer> >)  <Plug>(sexp_capture_next_element)
+
+let g:conjure#mapping#prefix = ",e"
+
