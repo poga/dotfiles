@@ -54,6 +54,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'bakpakin/janet.vim'
+Plug 'kovisoft/slimv'
+Plug 'NLKNguyen/vim-lisp-syntax'
 
 " ======
 " Theme
@@ -482,7 +484,7 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 
 let g:rainbow_conf = {
-\  'ctermfgs': [ 'darkgray', 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
+\  'ctermfgs': ['white', 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
 \  'separately': {
 \    'css': 0,
 \    'yaml': 0,
@@ -559,4 +561,7 @@ nmap <buffer> <(  <Plug>(sexp_capture_prev_element)
 nmap <buffer> >)  <Plug>(sexp_capture_next_element)
 
 let g:conjure#mapping#prefix = ",e"
+
+autocmd BufWritePre *.janet exec '!janet -k <afile>'
+
 
