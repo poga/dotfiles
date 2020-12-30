@@ -415,7 +415,7 @@ let g:fzf_colors =
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-nmap <Leader>b :Buffers<CR>
+nmap <Leader>B :Buffers<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>` :GitFiles<CR>
 nmap <Leader>~ :Files<CR>
