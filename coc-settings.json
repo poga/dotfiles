@@ -34,5 +34,6 @@
     }
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "coc.source.iced.enable": true
 }

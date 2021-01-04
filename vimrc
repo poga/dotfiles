@@ -27,7 +27,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-"
+
 Plug 'terryma/vim-expand-region'
 Plug 'luochen1990/rainbow'
 Plug 'w0rp/ale'
@@ -49,13 +49,19 @@ Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'Olical/conjure'
+" Plug 'Olical/conjure'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'bakpakin/janet.vim'
-Plug 'kovisoft/slimv'
+Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
+
+" Clojure
+Plug 'guns/vim-sexp',    {'for': 'clojure'}
+Plug 'liquidz/vim-iced', {'for': 'clojure'}
+Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
+Plug 'liquidz/vim-iced-function-list', {'for': 'clojure', 'on': 'IcedBrowseFunction'}
 
 " ======
 " Theme
@@ -565,3 +571,8 @@ let g:conjure#mapping#prefix = ",e"
 autocmd BufWritePre *.janet exec '!janet -k <afile>'
 
 
+
+" Enable vim-iced's default key mapping
+" This is recommended for newbies
+let g:iced_enable_default_key_mappings = v:true
+let g:iced_enable_clj_kondo_analysis = v:true
