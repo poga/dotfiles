@@ -58,6 +58,7 @@ Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
 
 " Clojure
+Plug 'clojure-vim/clojure.vim'
 Plug 'guns/vim-sexp',    {'for': 'clojure'}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
