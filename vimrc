@@ -170,14 +170,6 @@ autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 
-" javascript
-autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
-
-
 
 " ============
 " key mapping
@@ -209,17 +201,6 @@ nmap <tab> v>
 nmap <s-tab> v<
 
 nmap <F5> :NERDTree<CR>
-
-
-nmap <F8> :TagbarToggle<CR>
-
-"
-" remap split and vsplit
-nnoremap <leader>s :split<cr>
-nnoremap <leader>vs :vsplit<cr>
-
-command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
-
 
 " vim-startify
 autocmd User Startified set buftype=
@@ -253,35 +234,6 @@ let g:jsx_ext_required = 0
 
 " close vim if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" use gotags for golang tagbar
-let g:tagbar_type_go = {
-	\ 'ctagstype' : 'go',
-	\ 'kinds'     : [
-		\ 'p:package',
-		\ 'i:imports:1',
-		\ 'c:constants',
-		\ 'v:variables',
-		\ 't:types',
-		\ 'n:interfaces',
-		\ 'w:fields',
-		\ 'e:embedded',
-		\ 'm:methods',
-		\ 'r:constructor',
-		\ 'f:functions'
-	\ ],
-	\ 'sro' : '.',
-	\ 'kind2scope' : {
-		\ 't' : 'ctype',
-		\ 'n' : 'ntype'
-	\ },
-	\ 'scope2kind' : {
-		\ 'ctype' : 't',
-		\ 'ntype' : 'n'
-	\ },
-	\ 'ctagsbin'  : 'gotags',
-	\ 'ctagsargs' : '-sort -silent'
-  \ }
 
 function! s:check_back_space() abort
   let col = col('.') - 1
