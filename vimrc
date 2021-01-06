@@ -443,7 +443,7 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 
 let g:rainbow_conf = {
-\  'ctermfgs': ['white', 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
+\  'ctermfgs': ['darkred', 'green', 'yellow', 'darkblue', 'magenta', 'darkred', 'white', 'darkcyan', 'brown', 'darkmagenta'],
 \  'separately': {
 \    'css': 0,
 \    'yaml': 0,

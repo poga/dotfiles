@@ -110,3 +110,5 @@ if [ -x "$(command -v opam)" ]; then
   test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 fi
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH=~/.vim/plugged/vim-iced/bin:$PATH
+export PATH=~/.emacs.d/bin:$PATH
