@@ -112,3 +112,5 @@ fi
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH=~/.vim/plugged/vim-iced/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
+
+alias tmux='tmux -2'
