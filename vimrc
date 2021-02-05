@@ -17,8 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'chriskempson/base16-vim'
 Plug 'jremmen/vim-ripgrep'
-Plug 'vim-scripts/Align'
-Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -44,8 +42,6 @@ Plug 'cespare/vim-toml'
 Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
 Plug 'vim-ruby/vim-ruby'
 Plug 'ap/vim-css-color'
-Plug 'wavded/vim-stylus'
-Plug 'wlangstroth/vim-racket'
 Plug 'rhysd/vim-llvm'
 Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
@@ -74,7 +70,6 @@ Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
-Plug 'zeis/vim-kolor'
 call plug#end()
 
 filetype plugin indent on

@@ -51,12 +51,6 @@ if [ -x "$(command -v cargo)" ]; then
 fi
 export PATH=$PATH:~/.local/bin
 
-if [ -x "$(command -v pyenv)" ]; then
-  export PATH="/Users/poga/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
 export LC_CTYPE="en_US.UTF-8"
 export LANG=en_US.UTF-8
 
