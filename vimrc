@@ -1,3 +1,4 @@
+let g:sexp_filetypes='lisp,scheme,clojure,janet'
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -25,6 +26,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 Plug 'terryma/vim-expand-region'
 Plug 'luochen1990/rainbow'
@@ -55,7 +57,6 @@ Plug 'NLKNguyen/vim-lisp-syntax'
 
 " Clojure
 Plug 'clojure-vim/clojure.vim'
-Plug 'guns/vim-sexp',    {'for': 'clojure'}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
 Plug 'liquidz/vim-iced-function-list', {'for': 'clojure', 'on': 'IcedBrowseFunction'}
