@@ -45,7 +45,7 @@ Plug 'ap/vim-css-color'
 Plug 'rhysd/vim-llvm'
 Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-" Plug 'Olical/conjure'
+Plug 'Olical/conjure'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -514,11 +514,7 @@ nmap <buffer> <)  <Plug>(sexp_emit_tail_element)
 nmap <buffer> <(  <Plug>(sexp_capture_prev_element)
 nmap <buffer> >)  <Plug>(sexp_capture_next_element)
 
-let g:conjure#mapping#prefix = ",e"
-
-autocmd BufWritePre *.janet exec '!janet -k <afile>'
-
-
+let g:conjure#mapping#prefix = ","
 
 " Enable vim-iced's default key mapping
 " This is recommended for newbies
