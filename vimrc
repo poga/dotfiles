@@ -1,4 +1,5 @@
 let g:sexp_filetypes='lisp,scheme,clojure,janet'
+
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -54,7 +55,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'bakpakin/janet.vim'
-Plug 'kovisoft/slimv', { 'for': 'lisp' }
+Plug 'poga/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
 
 " Clojure
