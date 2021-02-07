@@ -36,6 +36,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'chrisbra/unicode.vim'
+
 " ======
 " Language Support
 Plug 'tbastos/vim-lua'
