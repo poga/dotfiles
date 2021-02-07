@@ -314,8 +314,6 @@ function! s:cocActionsOpenFromSelected(type) abort
 endfunction
 xmap <silent> <leader>z :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
 nmap <silent> <leader>z :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
-" Manage extensions
-nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
@@ -476,4 +474,7 @@ let g:iced_enable_clj_kondo_analysis = v:true
 
 au Filetype lisp let b:AutoPairs = {"(": ")", "{": "}", '"': '"', "[": "]"}
 
-nmap <C-E> ,e!
+" keymap for my own slimv fork
+noremap <C-D> :<C-U>call SlimvEvalDefunAndReplace()<CR>
+noremap <C-E> :<C-U>call SlimvEvalExpAndReplace()<CR>
+
