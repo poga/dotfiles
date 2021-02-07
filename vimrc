@@ -478,3 +478,9 @@ au Filetype lisp let b:AutoPairs = {"(": ")", "{": "}", '"': '"', "[": "]"}
 noremap <C-D> :<C-U>call SlimvEvalDefunAndReplace()<CR>
 noremap <C-E> :<C-U>call SlimvEvalExpAndReplace()<CR>
 
+let g:markdown_fenced_languages = ['lisp']
+
+" syntax for slime note
+au BufRead,BufNewFile *.sn set filetype=lisp
+au BufRead,BufNewFile *.sn set syntax=markdown
+
