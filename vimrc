@@ -484,4 +484,5 @@ let g:markdown_fenced_languages = ['lisp']
 " syntax for slime note
 au BufRead,BufNewFile *.sn set filetype=lisp
 au BufRead,BufNewFile *.sn set syntax=markdown
+au BufRead,BufNewFile *.sn set wrap
 
