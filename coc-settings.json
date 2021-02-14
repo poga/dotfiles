@@ -1,10 +1,14 @@
 {
   "languageserver": {
+    "golang": {
+      "command": "bingo",
+      "args": ["--diagnostics-style=instant"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
     "clangd": {
       "command": "/usr/local/opt/llvm/bin/clangd",
-      "args": [
-        "--background-index"
-      ],
+      "args": ["--background-index"],
       "rootPatterns": [
         "compile_flags.txt",
         "compile_commands.json",
@@ -12,28 +16,16 @@
         ".git/",
         ".hg/"
       ],
-      "filetypes": [
-        "c",
-        "cpp",
-        "objc",
-        "objcpp"
-      ]
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
     "ocaml-lsp": {
       "command": "opam",
-      "args": [
-        "config",
-        "exec",
-        "--",
-        "ocamllsp"
-      ],
-      "filetypes": [
-        "ocaml",
-        "reason"
-      ]
+      "args": ["config", "exec", "--", "ocamllsp"],
+      "filetypes": ["ocaml", "reason"]
     }
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown"],
   "coc.source.iced.enable": true
 }
