@@ -486,3 +486,4 @@ au BufRead,BufNewFile *.sn set filetype=lisp
 au BufRead,BufNewFile *.sn set syntax=markdown
 au BufRead,BufNewFile *.sn set wrap
 
+let g:slimv_updatetime = 10
