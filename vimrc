@@ -66,13 +66,6 @@ Plug 'liquidz/vim-iced-function-list', {'for': 'clojure', 'on': 'IcedBrowseFunct
 
 " ======
 " Theme
-Plug 'sickill/vim-monokai'
-Plug 'fatih/molokai'
-Plug 'altercation/vim-colors-solarized'
-Plug 'nanotech/jellybeans.vim'
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plug 'junegunn/seoul256.vim'
-Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
 call plug#end()
 
