@@ -433,7 +433,7 @@ let g:ale_linters = {
 let g:ale_linters_explicit = 1
 
 let g:rainbow_conf = {
-\  'ctermfgs': [52, 54, 56, 58, 60, 62, 64, 66, 68, 70],
+\  'ctermfgs': [70, 68, 66, 64, 62, 60, 58, 56, 54, 52],
 \  'separately': {
 \    'css': 0,
 \    'yaml': 0,
