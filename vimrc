@@ -480,3 +480,8 @@ au BufRead,BufNewFile *.sn set syntax=markdown
 au BufRead,BufNewFile *.sn set wrap
 
 let g:slimv_updatetime = 10
+
+syn match snTodos /\%(-TODO\)/
+hi link snTodos Todo
+syn match snDone /\%(-DONE\)/
+hi link snDone Comment
