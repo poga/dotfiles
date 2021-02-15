@@ -481,7 +481,7 @@ au BufRead,BufNewFile *.sn set wrap
 
 let g:slimv_updatetime = 10
 
-syn match snTodos /\%(-TODO\)/
-hi link snTodos Todo
-syn match snDone /\%(-DONE\)/
+syn match snTodos /\%(·\)/
+hi link snTodos Comment
+syn match snDone /\%(✓\)/
 hi link snDone Comment
