@@ -1,3 +1,5 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 if [[ $- == *i* ]]; then
   export CLICOLOR=1
   export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -108,3 +110,4 @@ export PATH=~/.vim/plugged/vim-iced/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
 
 alias tmux='tmux -2'
+eval $(/opt/homebrew/bin/brew shellenv)
