@@ -56,12 +56,6 @@ export PATH=$PATH:~/.local/bin
 export LC_CTYPE="en_US.UTF-8"
 export LANG=en_US.UTF-8
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
-
 if [ -x "$(command -v exa)" ]; then
   alias ls='exa'
 fi
@@ -111,3 +105,9 @@ export PATH=~/.emacs.d/bin:$PATH
 
 alias tmux='tmux -2'
 eval $(/opt/homebrew/bin/brew shellenv)
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
