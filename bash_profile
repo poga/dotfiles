@@ -37,8 +37,6 @@ alias py='python3'
 export EDITOR=vim
 alias vim=nvim
 
-alias p6='perl6'
-
 # Git bash completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
@@ -75,13 +73,9 @@ if [ -x "$(command -v git)" ]; then
   git config --global core.editor nvim
 fi
 
-export PATH=$PATH:$HOME/.conduit/bin
 export PATH=$PATH:/Applications/Racket\ v8.0/bin
 export PATH=$PATH:/Applications/Julia-1.5.app/Contents/Resources/julia/bin
 export GOPATH=$HOME/projects/go
-export PATH=$PATH:/usr/local/go/bin
-
-export PATH=$PATH:$HOME/projects/go/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -97,11 +91,10 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 if [ -x "$(command -v opam)" ]; then
   eval $(opam env)
-  test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 fi
+
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH=~/.vim/plugged/vim-iced/bin:$PATH
-export PATH=~/.emacs.d/bin:$PATH
 
 alias tmux='tmux -2'
 eval $(/opt/homebrew/bin/brew shellenv)
