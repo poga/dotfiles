@@ -40,20 +40,17 @@ Plug 'chrisbra/unicode.vim'
 
 " ======
 " Language Support
-Plug 'tbastos/vim-lua'
+Plug 'tbastos/vim-lua', {'for': 'lua'}
 Plug 'exu/pgsql.vim'
-Plug 'cespare/vim-toml'
+Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
 Plug 'vim-ruby/vim-ruby'
 Plug 'ap/vim-css-color'
-Plug 'rhysd/vim-llvm'
-Plug 'jdonaldson/vaxe'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Olical/conjure', {'for': ['clojure', 'janet']}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'bakpakin/janet.vim'
 Plug 'poga/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
 Plug 'leafgarland/typescript-vim'
