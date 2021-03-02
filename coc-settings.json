@@ -7,7 +7,7 @@
       "filetypes": ["go"]
     },
     "clangd": {
-      "command": "/usr/local/opt/llvm/bin/clangd",
+      "command": "clangd",
       "args": ["--background-index"],
       "rootPatterns": [
         "compile_flags.txt",

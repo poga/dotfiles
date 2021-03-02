@@ -46,9 +46,7 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-if [ -x "$(command -v cargo)" ]; then
-  source $HOME/.cargo/env
-fi
+source $HOME/.cargo/env
 export PATH=$PATH:~/.local/bin
 
 export LC_CTYPE="en_US.UTF-8"
@@ -102,3 +100,9 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then . '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
+
+# homebrew LLVM
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
