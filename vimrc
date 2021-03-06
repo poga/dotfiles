@@ -54,6 +54,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'poga/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
 Plug 'leafgarland/typescript-vim'
+Plug 'elixir-editors/vim-elixir'
 
 " Clojure
 Plug 'clojure-vim/clojure.vim'
