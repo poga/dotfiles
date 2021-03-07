@@ -19,7 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jpalardy/vim-slime'
 " sexp
@@ -482,3 +482,5 @@ syn match snTodos /\%(·\)/
 hi link snTodos Comment
 syn match snDone /\%(✓\)/
 hi link snDone Comment
+
+set rtp+=/opt/homebrew/opt/fzf
