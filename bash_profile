@@ -1,4 +1,10 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
+export KUBE_PS1_NS_ENABLE=false
+export KUBE_PS1_SYMBOL_ENABLE=false
+export KUBE_PS1_PREFIX='['
+export KUBE_PS1_SUFFIX=']'
+export KUBE_PS1_CTX_COLOR=cyan
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 
 if [[ $- == *i* ]]; then
   export CLICOLOR=1
@@ -26,7 +32,7 @@ if [[ $- == *i* ]]; then
   BOLD="\[$(tput bold)\]"
   RESET="\[$(tput sgr0)\]"
 
-  export PS1="\n[${BLUE}${BOLD}\h${RESET}:${GREEN}\w${RESET}] ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
+  export PS1="\n[${BLUE}${BOLD}\h${RESET}:${GREEN}\w${RESET}] \$(kube_ps1) ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit) ${RESET}$ "
 fi
 
 # Alias
@@ -119,3 +125,6 @@ export MANPATH="/opt/local/share/man:$MANPATH"
 # MacPorts Installer addition on 2021-03-02_at_10:19:56: adding an appropriate DISPLAY variable for use with MacPorts.
 export DISPLAY=:0
 # Finished adapting your DISPLAY environment variable for use with MacPorts.
+
+eval "$(direnv hook bash)"
+
