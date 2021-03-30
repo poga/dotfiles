@@ -3,7 +3,7 @@ export KUBE_PS1_NS_ENABLE=false
 export KUBE_PS1_SYMBOL_ENABLE=false
 export KUBE_PS1_PREFIX='['
 export KUBE_PS1_SUFFIX=']'
-export KUBE_PS1_CTX_COLOR=cyan
+export KUBE_PS1_CTX_COLOR=yellow
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 
 if [[ $- == *i* ]]; then
@@ -32,7 +32,7 @@ if [[ $- == *i* ]]; then
   BOLD="\[$(tput bold)\]"
   RESET="\[$(tput sgr0)\]"
 
-  export PS1="\n[${BLUE}${BOLD}\h${RESET}:${GREEN}\w${RESET}] \$(kube_ps1) ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit) ${RESET}$ "
+  export PS1="\n[${BLUE}${BOLD}\h${RESET}:${GREEN}\w${RESET}] \$(kube_ps1) ${RED}\$(git_branch)${RESET}${YELLOW}\$(git_since_last_commit)${RESET}$ "
 fi
 
 # Alias
