@@ -425,7 +425,9 @@ let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
 let g:ale_linters = {
-  \ 'clojure': ['clj-kondo', 'joker']
+  \ 'clojure': ['clj-kondo', 'joker'],
+  \ 'typescript': ['tslint'],
+  \ 'typescriptreact': ['tslint']
   \}
 let g:ale_linters_explicit = 1
 
