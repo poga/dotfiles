@@ -77,9 +77,7 @@ if [ -x "$(command -v git)" ]; then
   git config --global core.editor nvim
 fi
 
-export PATH=$PATH:/Applications/Racket\ v8.0/bin
-export PATH=$PATH:/Applications/Julia-1.5.app/Contents/Resources/julia/bin
-export GOPATH=$HOME/projects/go
+export PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -110,21 +108,11 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then . '/
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
+export CPATH=$CPATH:/opt/homebrew/include
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
+
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export KUBE_EDITOR=nvim
-# MacPorts Installer addition on 2021-03-02_at_10:19:56: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2021-03-02_at_10:19:56: adding an appropriate MANPATH variable for use with MacPorts.
-export MANPATH="/opt/local/share/man:$MANPATH"
-# Finished adapting your MANPATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2021-03-02_at_10:19:56: adding an appropriate DISPLAY variable for use with MacPorts.
-export DISPLAY=:0
-# Finished adapting your DISPLAY environment variable for use with MacPorts.
 
 eval "$(direnv hook bash)"
 
