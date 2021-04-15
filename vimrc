@@ -55,6 +55,7 @@ Plug 'poga/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'mustache/vim-mustache-handlebars'
 
 " Clojure
 Plug 'clojure-vim/clojure.vim'
