@@ -480,6 +480,7 @@ au BufRead,BufNewFile *.sn set syntax=markdown
 au BufRead,BufNewFile *.sn set wrap
 
 let g:slimv_updatetime = 10
+let g:slimv_repl_split=4
 
 syn match snTodos /\%(·\)/
 hi link snTodos Comment
