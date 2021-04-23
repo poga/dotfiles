@@ -117,3 +117,4 @@ export KUBE_EDITOR=nvim
 eval "$(direnv hook bash)"
 
 alias k='kubectl'
+alias kp='kube-prompt'
