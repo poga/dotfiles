@@ -55,9 +55,9 @@ Plug 'NLKNguyen/vim-lisp-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'jdonaldson/vaxe'
 
 " Clojure
-Plug 'clojure-vim/clojure.vim'
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
 Plug 'liquidz/vim-iced-function-list', {'for': 'clojure', 'on': 'IcedBrowseFunction'}
@@ -491,3 +491,5 @@ syn match snDone /\%(✓\)/
 hi link snDone Comment
 
 set rtp+=/opt/homebrew/opt/fzf
+
+let g:iced_enable_clj_kondo_local_analysis=v:true

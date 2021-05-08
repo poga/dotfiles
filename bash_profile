@@ -73,7 +73,7 @@ if [ -x "$(command -v git)" ]; then
   git config --global alias.br branch
 
   git config --global user.name "Poga Po"
-  git config --global user.email poga.po@gmail.com
+  git config --global user.email hi@devpoga.org
   git config --global core.editor nvim
 fi
 
@@ -105,13 +105,13 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/path.bash.inc' ]; then . '/Users/
 if [ -f '/Users/poga/projects/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/completion.bash.inc'; fi
 
 # homebrew LLVM
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-
-export CPATH=$CPATH:/opt/homebrew/include
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
-
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+#
+# export CPATH=$CPATH:/opt/homebrew/include
+# export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
+#
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export KUBE_EDITOR=nvim
 
 eval "$(direnv hook bash)"

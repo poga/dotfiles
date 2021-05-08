@@ -24,18 +24,6 @@
       "filetypes": ["ocaml", "reason"]
     }
   },
-  "haxe": {
-    "command": "node",
-    "args": ["~/projects/haxe-language-server/bin/server.js"],
-    "filetypes": ["haxe"],
-    "trace.server": "verbose",
-    "initializationOptions": {
-      "displayArguments": ["build.hxml"]
-    },
-    "settings": {
-      "haxe.executable": "haxe"
-    }
-  },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown"],
