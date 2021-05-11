@@ -19,6 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jpalardy/vim-slime'
@@ -493,3 +494,7 @@ hi link snDone Comment
 set rtp+=/opt/homebrew/opt/fzf
 
 let g:iced_enable_clj_kondo_local_analysis=v:true
+
+let g:indent_blankline_use_treesitter = v:true
+
+
