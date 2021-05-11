@@ -497,4 +497,6 @@ let g:iced_enable_clj_kondo_local_analysis=v:true
 
 let g:indent_blankline_use_treesitter = v:true
 
+let g:indent_blankline_char = '│'
+
 
