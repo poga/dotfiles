@@ -499,4 +499,5 @@ let g:indent_blankline_use_treesitter = v:true
 
 let g:indent_blankline_char = '│'
 
+let g:slimv_keybindings=2
 
