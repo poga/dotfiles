@@ -35,7 +35,7 @@ Plug 'w0rp/ale'
 Plug 'joom/latex-unicoder.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
-Plug 'jiangmiao/auto-pairs'
+Plug 'LunarWatcher/auto-pairs'
 
 Plug 'chrisbra/unicode.vim'
 
@@ -57,6 +57,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'jdonaldson/vaxe'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Clojure
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
@@ -496,8 +497,6 @@ set rtp+=/opt/homebrew/opt/fzf
 let g:iced_enable_clj_kondo_local_analysis=v:true
 
 let g:indent_blankline_use_treesitter = v:true
-
 let g:indent_blankline_char = '│'
 
 let g:slimv_keybindings=2
-
