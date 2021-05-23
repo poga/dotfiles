@@ -496,6 +496,16 @@ hi link snDone Comment
 set rtp+=/opt/homebrew/opt/fzf
 
 let g:iced_enable_clj_kondo_local_analysis=v:true
+  " Format whole buffer on writing files
+  au BufWritePre *.clj,*.cljs,*.cljc,*.edn execute ':IcedFormatSyncAll'
+
+  " Format only current form on writing files
+  " au BufWritePre *.clj,*.cljs,*.cljc,*.edn execute ':IcedFormatSync'
+  " Change key mappings as you like.
+  au FileType clojure nmap <silent><buffer> <Leader>ktt <Plug>(iced_kaocha_test_under_cursor)
+  au FileType clojure nmap <silent><buffer> <Leader>ktn <Plug>(iced_kaocha_test_ns)
+  au FileType clojure nmap <silent><buffer> <Leader>ktr <Plug>(iced_kaocha_test_redo)
+  au FileType clojure nmap <silent><buffer> <Leader>ktl <Plug>(iced_kaocha_test_rerun_last)
 
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char = '│'
