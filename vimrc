@@ -24,6 +24,8 @@ Plug 'jpalardy/vim-slime'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 " telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -344,9 +346,8 @@ endfunction
 nnoremap <leader>` <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>B <cmd>Telescope buffers<cr>
-
-" fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
-nmap <leader>C :Commands<cr>
+nnoremap <leader>C <cmd>Telescope commands<cr>
+nnoremap <leader>T <cmd>Telescope treesitter<cr>
 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
