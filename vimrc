@@ -21,6 +21,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}
 Plug 'jpalardy/vim-slime'
+Plug 'hrsh7th/nvim-compe'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
