@@ -369,6 +369,7 @@ let g:rainbow_conf = {
 \  'ctermfgs': [70, 68, 66, 64, 62, 60, 58, 56, 54, 52],
 \  'separately': {
 \    'css': 0,
+\    'elixir': 0,
 \    'yaml': 0,
 \    'racket': {
 \      'parentheses': ["start=/(/ end=/)/ fold", "start=/`(/ end=/)/ fold", "start=/'(/ end=/)/ fold", 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
