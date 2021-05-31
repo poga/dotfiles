@@ -6,8 +6,11 @@
   (when (probe-file quicklisp-init)
     (load quicklisp-init)))
 
+(push "~/common-lisp/rutils/" asdf:*central-registry*)
+
+(ql:quickload "str")
+(ql:quickload "dexador")
 (ql:quickload :rutils)
 (in-package :rtl-user)
 (named-readtables:in-readtable rutils-readtable)
 
-(ql:quickload "str")
