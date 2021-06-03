@@ -11,6 +11,14 @@
 (ql:quickload "str")
 (ql:quickload "dexador")
 (ql:quickload :rutils)
-(in-package :rtl-user)
+(ql:quickload :cl-ppcre)
+(ql:quickload "bordeaux-threads")
+
+(defpackage :poga-user
+  (:use :cl :rtl))
+
+(in-package :poga-user)
 (named-readtables:in-readtable rutils-readtable)
+
+(toggle-print-hash-table)
 
