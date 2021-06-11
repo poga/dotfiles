@@ -118,3 +118,6 @@ eval "$(direnv hook bash)"
 
 alias k='kubectl'
 alias kp='kube-prompt'
+alias lg='lazygit'
+
+export PATH=$PATH:~/.mix/escripts

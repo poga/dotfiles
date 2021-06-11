@@ -22,6 +22,10 @@
       "command": "opam",
       "args": ["config", "exec", "--", "ocamllsp"],
       "filetypes": ["ocaml", "reason"]
+    },
+    "erlang": {
+      "command": "erlang_ls",
+      "filetypes": ["erlang"]
     }
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
