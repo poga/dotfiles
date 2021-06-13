@@ -1,11 +1,5 @@
 {
   "languageserver": {
-    "golang": {
-      "command": "bingo",
-      "args": ["--diagnostics-style=instant"],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    },
     "clangd": {
       "command": "clangd",
       "args": ["--background-index"],

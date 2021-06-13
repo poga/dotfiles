@@ -57,7 +57,6 @@ Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
 Plug 'vim-ruby/vim-ruby'
 Plug 'ap/vim-css-color'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'poga/slimv', { 'for': 'lisp' }
