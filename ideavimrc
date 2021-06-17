@@ -1,0 +1,11 @@
+imap jj <Esc>
+nmap ; :
+nmap <Space> <PageDown>
+set ideajoin
+set visualbell
+set noerrorbells
+let mapleader=","
+
+set easymotion
+set surround
+set highlightedyank
