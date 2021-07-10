@@ -26,5 +26,4 @@
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown"],
   "coc.source.iced.enable": true,
-  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh"
 }
