@@ -27,10 +27,9 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
-" telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " sexp
 Plug 'guns/vim-sexp'
@@ -342,11 +341,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nnoremap <leader>` <cmd>Telescope find_files<cr>
-nnoremap <leader>g <cmd>Telescope live_grep<cr>
-nnoremap <leader>B <cmd>Telescope buffers<cr>
-nnoremap <leader>C <cmd>Telescope commands<cr>
-nnoremap <leader>T <cmd>Telescope treesitter<cr>
+nnoremap <leader>` <cmd>GFiles<cr>
+nnoremap <leader>B <cmd>Buffers<cr>
+nnoremap <leader>C <cmd>BCommits<cr>
 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
