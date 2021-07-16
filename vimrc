@@ -342,8 +342,9 @@ function! s:check_back_space() abort
 endfunction
 
 nnoremap <leader>` <cmd>GFiles<cr>
+nnoremap <leader>~ <cmd>Files<cr>
 nnoremap <leader>B <cmd>Buffers<cr>
-nnoremap <leader>C <cmd>BCommits<cr>
+nnoremap <leader>C <cmd>Commands<cr>
 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'

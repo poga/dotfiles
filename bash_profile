@@ -121,3 +121,8 @@ alias kp='kube-prompt'
 alias lg='lazygit'
 
 export PATH=$PATH:~/.mix/escripts
+
+eval "$(pyenv init --path)"
+
+
+export PATH="$HOME/.poetry/bin:$PATH"
