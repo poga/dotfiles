@@ -240,9 +240,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -278,12 +275,13 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Remap for do codeAction of selected region
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
 
-" Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -299,35 +297,6 @@ command! -nargs=0 Format :call CocAction('format')
 
 " Call Format on save for rust
 autocmd BufWritePre *.rs :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <leader>a  :<C-u>CocList diagnostics<cr>
-" Show possible actions
-" Remap for do codeAction of selected region
-function! s:cocActionsOpenFromSelected(type) abort
-  execute 'CocCommand actions.open ' . a:type
-endfunction
-xmap <silent> <leader>z :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
-nmap <silent> <leader>z :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
-" Show commands
-nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -395,6 +364,8 @@ let g:conjure#mapping#prefix = ","
 " This is recommended for newbies
 let g:iced_enable_default_key_mappings = v:true
 let g:iced_enable_clj_kondo_analysis = v:true
+let g:iced_enable_clj_kondo_local_analysis=v:true
+let g:iced#navigate#prefer_local_jump=v:true
 
 au Filetype lisp let b:AutoPairs = {"(": ")", "{": "}", '"': '"', "[": "]"}
 
@@ -433,3 +404,4 @@ let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char = '│'
 
 let g:slimv_keybindings=2
+
