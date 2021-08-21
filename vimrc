@@ -196,7 +196,6 @@ if has('nvim')
   nmap <BS> <C-W>h
 endif
 
-nmap <Space><Space> <PageDown>
 nmap <tab> v>
 nmap <s-tab> v<
 
