@@ -1,6 +1,5 @@
 imap jj <Esc>
 nmap ; :
-nmap <Space> <PageDown>
 set ideajoin
 set visualbell
 set noerrorbells
