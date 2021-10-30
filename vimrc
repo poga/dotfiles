@@ -40,12 +40,10 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'terryma/vim-expand-region'
 Plug 'luochen1990/rainbow'
 Plug 'w0rp/ale'
-Plug 'joom/latex-unicoder.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 Plug 'LunarWatcher/auto-pairs'
 
-Plug 'chrisbra/unicode.vim'
 
 " ======
 " Language Support
