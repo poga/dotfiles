@@ -67,12 +67,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'jdonaldson/vaxe'
 Plug 'JuliaEditorSupport/julia-vim'
 
-" Clojure
-Plug 'liquidz/vim-iced', {'for': 'clojure'}
-Plug 'liquidz/vim-iced-kaocha', {'for': 'clojure'}
-Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
-Plug 'liquidz/vim-iced-function-list', {'for': 'clojure', 'on': 'IcedBrowseFunction'}
-
 " ======
 " Theme
 Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
@@ -158,7 +152,6 @@ au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile *.rt set filetype=html
 au BufRead,BufNewFile .eslintrc set filetype=json
 au BufRead,BufNewFile .tern-project set filetype=json
-au BufRead,BufNewFile .cl set filetype=clojure
 
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -363,7 +356,6 @@ let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
 let g:ale_linters = {
-  \ 'clojure': ['clj-kondo', 'joker'],
   \ 'typescript': ['tslint'],
   \ 'typescriptreact': ['tslint']
   \}
@@ -440,14 +432,6 @@ let g:iced_enable_clj_kondo_local_analysis=v:true
   " Format whole buffer on writing files
   au BufWritePre *.clj,*.cljs,*.cljc,*.edn execute ':IcedFormatSyncAll'
 
-" Format only current form on writing files
-" au BufWritePre *.clj,*.cljs,*.cljc,*.edn execute ':IcedFormatSync'
-" Change key mappings as you like.
-au FileType clojure nmap <silent><buffer> <Leader>ktt <Plug>(iced_kaocha_test_under_cursor)
-au FileType clojure nmap <silent><buffer> <Leader>ktn <Plug>(iced_kaocha_test_ns)
-au FileType clojure nmap <silent><buffer> <Leader>ktr <Plug>(iced_kaocha_test_redo)
-au FileType clojure nmap <silent><buffer> <Leader>ktl <Plug>(iced_kaocha_test_rerun_last)
-au FileType clojure nmap <silent> gd :IcedDefJump<CR>
 
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char = '│'
