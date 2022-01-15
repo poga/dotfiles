@@ -8,3 +8,7 @@ let mapleader=","
 set easymotion
 set surround
 set highlightedyank
+
+
+" Press `f` to activate AceJump
+map <leader>f :action AceAction<CR>

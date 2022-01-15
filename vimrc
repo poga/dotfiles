@@ -22,6 +22,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jpalardy/vim-slime'
 Plug 'hrsh7th/nvim-compe'
+Plug 'mhinz/vim-startify'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -382,7 +383,16 @@ let g:rainbow_conf = {
 let g:rainbow_active = 1
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-actions', 'coc-go']
+let g:coc_global_extensions = [
+      \'coc-rust-analyzer',
+      \'coc-actions',
+      \'coc-go',
+      \'coc-haxe',
+      \'coc-pyright',
+      \'coc-tsserver',
+      \'coc-list',
+      \'coc-julia'
+      \]
 
 let g:gitgutter_sign_added = '┃'
 let g:gitgutter_sign_modified = '┃'
