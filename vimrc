@@ -390,7 +390,7 @@ let g:coc_global_extensions = [
       \'coc-haxe',
       \'coc-pyright',
       \'coc-tsserver',
-      \'coc-list',
+      \'coc-lists',
       \'coc-julia'
       \]
 
