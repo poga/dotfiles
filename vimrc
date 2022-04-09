@@ -23,6 +23,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jpalardy/vim-slime'
 Plug 'hrsh7th/nvim-compe'
 Plug 'mhinz/vim-startify'
+Plug 'jremmen/vim-ripgrep'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -66,6 +67,9 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'jdonaldson/vaxe'
 Plug 'JuliaEditorSupport/julia-vim'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
 
 " ======
 " Theme
@@ -161,6 +165,7 @@ autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
+autocmd FileType haxe setlocal shiftwidth=4 tabstop=4
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 autocmd filetype lisp,scheme setlocal equalprg=scmindent
