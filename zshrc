@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+	source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -99,3 +99,99 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source "$HOME/.cargo/env"
+
+export PATH=$PATH:/opt/homebrew/bin
+
+PATH="/Users/poga/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/poga/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/poga/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/poga/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/poga/perl5"; export PERL_MM_OPT;
+
+	alias g='git'
+	alias l='ls -al'
+	alias py='python3'
+
+	export EDITOR=vim
+	alias vim=nvim
+
+# Git bash completion
+	if [ -f ~/.git-completion.bash ]; then
+	. ~/.git-completion.bash
+	fi
+
+	source $HOME/.cargo/env
+	export PATH=$PATH:~/.local/bin
+
+	export LC_CTYPE="en_US.UTF-8"
+	export LANG=en_US.UTF-8
+
+	if [ -x "$(command -v exa)" ]; then
+	alias ls='exa'
+	fi
+	if [ -x "$(command -v bat)" ]; then
+	alias cat='bat --style="changes"'
+	fi
+
+	if [ -x "$(command -v git)" ]; then
+	git config --global alias.co checkout
+	git config --global alias.ci commit
+	git config --global alias.ic commit
+	git config --global alias.st status
+	git config --global alias.br branch
+
+	git config --global user.name "Poga Po"
+	git config --global user.email hi@devpoga.org
+	git config --global core.editor nvim
+	fi
+
+	export PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
+
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+	[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+	export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+
+	export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+	test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+	export PATH="/usr/local/opt/llvm/bin:$PATH"
+	export PATH=~/.vim/plugged/vim-iced/bin:$PATH
+
+	alias tmux='tmux -2'
+  eval $(/opt/homebrew/bin/brew shellenv)
+
+
+# homebrew LLVM
+# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+#
+# export CPATH=$CPATH:/opt/homebrew/include
+# export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
+#
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+	export KUBE_EDITOR=nvim
+
+	eval "$(direnv hook bash)"
+
+	alias k='kubectl'
+	alias kp='kube-prompt'
+	alias lg='lazygit'
+
+	export PATH=$PATH:~/.mix/escripts
+
+	eval "$(pyenv init --path)"
+
+
+	export PATH="$HOME/.poetry/bin:$PATH"
+
+	test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
