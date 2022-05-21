@@ -188,7 +188,7 @@ PERL_MM_OPT="INSTALL_BASE=/Users/poga/perl5"; export PERL_MM_OPT;
 # export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 	export KUBE_EDITOR=nvim
 
-	eval "$(direnv hook bash)"
+	eval "$(direnv hook zsh)"
 
 	alias k='kubectl'
 	alias kp='kube-prompt'
