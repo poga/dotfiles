@@ -40,7 +40,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 Plug 'terryma/vim-expand-region'
-Plug 'luochen1990/rainbow'
 Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
