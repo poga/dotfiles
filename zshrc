@@ -210,3 +210,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 alias isvg='rsvg-convert | icat'
 alias icat='kitty icat --align=left'
+
+alias s="kitty +kitten ssh"
+
