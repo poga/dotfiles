@@ -82,7 +82,7 @@ syntax on
 
 let g:seoul256_background = 233
 set background=dark
-colorscheme sonokai
+colorscheme hybrid
 
 set cursorline
 set nocursorcolumn
@@ -296,6 +296,14 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+" Use CTRL-S for selections ranges.
+" Requires 'textDocument/selectionRange' support of language server.
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+nmap <leader>cl  <Plug>(coc-codelens-action)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -447,10 +455,3 @@ let g:indent_blankline_show_current_context = v:true
 let g:slimv_keybindings=2
 
 
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
-nmap <leader>cl  <Plug>(coc-codelens-action)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
