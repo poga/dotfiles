@@ -213,3 +213,4 @@ alias icat='kitty icat --align=left'
 
 alias s="kitty +kitten ssh"
 
+alias p='cd ~/projects'
