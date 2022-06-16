@@ -24,6 +24,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'hrsh7th/nvim-compe'
 Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
+Plug 'habamax/vim-godot'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -453,4 +454,16 @@ let g:indent_blankline_show_current_context = v:true
 
 let g:slimv_keybindings=2
 
+func! GodotSettings() abort
+    setlocal foldmethod=expr
+    setlocal tabstop=4
+    nnoremap <buffer> <F4> :GodotRunLast<CR>
+    nnoremap <buffer> <F5> :GodotRun<CR>
+    nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+    nnoremap <buffer> <F7> :GodotRunFZF<CR>
+endfunc
+augroup godot | au!
+    au FileType gdscript call GodotSettings()
+augroup end
+let g:godot_executable = '/Applications/Godot.app'
 

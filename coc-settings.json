@@ -20,6 +20,11 @@
     "erlang": {
       "command": "erlang_ls",
       "filetypes": ["erlang"]
+    },
+    "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gdscript"],
+      "port": 6008
     }
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
