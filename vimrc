@@ -25,6 +25,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
 Plug 'habamax/vim-godot'
+Plug 'junegunn/goyo.vim'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
