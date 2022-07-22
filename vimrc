@@ -169,6 +169,7 @@ autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 autocmd FileType haxe setlocal shiftwidth=4 tabstop=4
+autocmd FileType gdscript setlocal shiftwidth=4 tabstop=4
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
 autocmd filetype lisp,scheme setlocal equalprg=scmindent
