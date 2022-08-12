@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -77,8 +70,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rust last-working-dir)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -119,63 +110,49 @@ PERL_LOCAL_LIB_ROOT="/Users/poga/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_R
 PERL_MB_OPT="--install_base \"/Users/poga/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/poga/perl5"; export PERL_MM_OPT;
 
-	alias g='git'
-	alias l='ls -al'
-	alias py='python3'
+alias g='git'
+alias l='ls -al'
+alias py='python3'
 
-	export EDITOR=vim
-	alias vim=nvim
+export EDITOR=vim
+alias vim=nvim
 
-# Git bash completion
-	if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
-	fi
+export PATH=$PATH:~/.local/bin
 
-	source $HOME/.cargo/env
-	export PATH=$PATH:~/.local/bin
+export LC_CTYPE="en_US.UTF-8"
+export LANG=en_US.UTF-8
 
-	export LC_CTYPE="en_US.UTF-8"
-	export LANG=en_US.UTF-8
+if [ -x "$(command -v exa)" ]; then
+alias ls='exa'
+fi
+if [ -x "$(command -v bat)" ]; then
+alias cat='bat --style="changes"'
+fi
 
-	if [ -x "$(command -v exa)" ]; then
-	alias ls='exa'
-	fi
-	if [ -x "$(command -v bat)" ]; then
-	alias cat='bat --style="changes"'
-	fi
+if [ -x "$(command -v git)" ]; then
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.ic commit
+git config --global alias.st status
+git config --global alias.br branch
 
-	if [ -x "$(command -v git)" ]; then
-	git config --global alias.co checkout
-	git config --global alias.ci commit
-	git config --global alias.ic commit
-	git config --global alias.st status
-	git config --global alias.br branch
+git config --global user.name "Poga Po"
+git config --global user.email hi@devpoga.org
+git config --global core.editor nvim
+fi
 
-	git config --global user.name "Poga Po"
-	git config --global user.email hi@devpoga.org
-	git config --global core.editor nvim
-	fi
+export PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
 
-	export PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
+test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
-	[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-	export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
-
-	export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
-	test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
-	export PATH="/usr/local/opt/llvm/bin:$PATH"
-	export PATH=~/.vim/plugged/vim-iced/bin:$PATH
-
-	alias tmux='tmux -2'
-  eval $(/opt/homebrew/bin/brew shellenv)
+alias tmux='tmux -2'
+eval $(/opt/homebrew/bin/brew shellenv)
 
 
 # homebrew LLVM
@@ -186,22 +163,21 @@ PERL_MM_OPT="INSTALL_BASE=/Users/poga/perl5"; export PERL_MM_OPT;
 # export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
 #
 # export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-	export KUBE_EDITOR=nvim
+export KUBE_EDITOR=nvim
 
-	eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
-	alias k='kubectl'
-	alias kp='kube-prompt'
-	alias lg='lazygit'
+alias k='kubectl'
+alias kp='kube-prompt'
+alias lg='lazygit'
 
-	export PATH=$PATH:~/.mix/escripts
+export PATH=$PATH:~/.mix/escripts
 
-	eval "$(pyenv init --path)"
+eval "$(pyenv init --path)"
 
+export PATH="$HOME/.poetry/bin:$PATH"
 
-	export PATH="$HOME/.poetry/bin:$PATH"
-
-	test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -211,6 +187,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias isvg='rsvg-convert | icat'
 alias icat='kitty icat --align=left'
 
-alias s="kitty +kitten ssh"
-
-alias p='cd ~/projects'
