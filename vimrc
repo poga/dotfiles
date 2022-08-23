@@ -468,3 +468,7 @@ augroup godot | au!
 augroup end
 let g:godot_executable = '/Applications/Godot.app'
 
+" Lua
+lua << EOF
+  require('treesitter')
+EOF
