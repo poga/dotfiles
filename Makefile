@@ -5,4 +5,5 @@ all:
 		ln -s $$(readlink -f ./bash_profile) ~/.bash_profile && \
 		ln -s $$(readlink -f ./tmux.conf) ~/.tmux.conf && \
 		ln -s $$(readlink -f ./kitty) ~/.config/kitty && \
+		ln -s $$(readlink -f ./lua) ~/.config/nvim/lua && \
 
