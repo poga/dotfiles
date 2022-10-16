@@ -15,17 +15,12 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'chriskempson/base16-vim'
+Plug 'tpope/vim-commentary' " gcc for commenting out a line, gc<motion> for commenting motion target. ex. gcap
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jpalardy/vim-slime'
-Plug 'hrsh7th/nvim-compe'
 Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
-Plug 'habamax/vim-godot'
-Plug 'junegunn/goyo.vim'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -35,11 +30,7 @@ Plug 'nvim-treesitter/playground'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" sexp
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 Plug 'terryma/vim-expand-region'
 Plug 'w0rp/ale'
@@ -47,9 +38,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 Plug 'LunarWatcher/auto-pairs'
 
-Plug 'arthurxavierx/vim-unicoder'
 Plug 'tikhomirov/vim-glsl'
-
 
 " ======
 " Language Support
@@ -62,12 +51,10 @@ Plug 'ap/vim-css-color'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'poga/slimv', { 'for': 'lisp' }
 Plug 'NLKNguyen/vim-lisp-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'jdonaldson/vaxe'
 Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'neovim/nvim-lspconfig'
@@ -76,7 +63,6 @@ Plug 'simrat39/rust-tools.nvim'
 " ======
 " Theme
 Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
-Plug 'sainnhe/sonokai'
 call plug#end()
 
 filetype plugin indent on
