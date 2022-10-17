@@ -461,3 +461,19 @@ let g:godot_executable = '/Applications/Godot.app'
 lua << EOF
   require('treesitter')
 EOF
+
+" for new coc.nvim "custom popup""
+function! CheckBackSpace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackSpace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" below is for using ENTER for completion, I actually don't like it, CTRL+Y works better for me, you can omit this part if you are like me
+
+inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() :
+        \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
