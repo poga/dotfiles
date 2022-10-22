@@ -29,6 +29,8 @@
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown"],
-  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh"
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown", "python"],
+  "python.formatting.provider": "blackd",
+  "python.linting.flake8Enabled": true,
+  "pyright.testing.provider": "pytest"
 }

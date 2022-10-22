@@ -33,12 +33,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 
 Plug 'terryma/vim-expand-region'
-Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 Plug 'LunarWatcher/auto-pairs'
-
-Plug 'tikhomirov/vim-glsl'
 
 " ======
 " Language Support
@@ -148,17 +145,11 @@ au BufRead,BufNewFile .tern-project set filetype=json
 
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType ls setlocal shiftwidth=4 tabstop=4
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
-autocmd FileType cs setlocal shiftwidth=4 tabstop=4
-autocmd FileType haskell setlocal shiftwidth=4 tabstop=4
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
-autocmd FileType haxe setlocal shiftwidth=4 tabstop=4
-autocmd FileType gdscript setlocal shiftwidth=4 tabstop=4
 
 autocmd BufWinEnter *.{md,mkd,mkdn,mark*} silent setf markdown
-autocmd filetype lisp,scheme setlocal equalprg=scmindent
 
 " ============
 " key mapping
@@ -216,7 +207,6 @@ highligh jsxAttrib cterm=italic ctermfg=166 gui=italic
 highligh jsxTag ctermfg=107
 
 hi CocInlayHint guibg=Black guifg=Gray ctermbg=Black ctermfg=Gray
-
 
 " TODO
 highligh Todo ctermfg=232 ctermbg=220 cterm=underline
@@ -361,12 +351,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
-let g:ale_linters = {
-  \ 'typescript': ['tslint'],
-  \ 'typescriptreact': ['tslint']
-  \}
-let g:ale_linters_explicit = 1
-
 let g:rainbow_conf = {
 \  'ctermfgs': [70, 68, 66, 64, 62, 60, 58, 56, 54, 52],
 \  'separately': {
@@ -385,11 +369,9 @@ let g:coc_global_extensions = [
       \'coc-rust-analyzer',
       \'coc-actions',
       \'coc-go',
-      \'coc-haxe',
       \'coc-pyright',
       \'coc-tsserver',
-      \'coc-lists',
-      \'coc-julia'
+      \'coc-lists'
       \]
 
 let g:gitgutter_sign_added = '┃'
@@ -399,8 +381,6 @@ let g:gitgutter_sign_removed = '┃'
 highlight GitGutterAdd guifg=#009900 ctermfg=22
 highlight GitGutterChange guifg=#bbbb00 ctermfg=58
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
-
-let g:vaxe_enable_airline_defaults = 0
 
 let g:highlightedyank_highlight_duration = 200
 
@@ -415,25 +395,6 @@ let g:iced#navigate#prefer_local_jump=v:true
 
 au Filetype lisp let b:AutoPairs = {"(": ")", "{": "}", '"': '"', "[": "]"}
 
-" keymap for my own slimv fork
-noremap <C-D> :<C-U>call SlimvEvalDefunAndReplace()<CR>
-noremap <C-E> :<C-U>call SlimvEvalExpAndReplace()<CR>
-
-let g:markdown_fenced_languages = ['lisp']
-
-" syntax for slime note
-au BufRead,BufNewFile *.sn set filetype=lisp
-au BufRead,BufNewFile *.sn set syntax=markdown
-au BufRead,BufNewFile *.sn set wrap
-
-let g:slimv_updatetime = 10
-let g:slimv_repl_split=4
-
-syn match snTodos /\%(·\)/
-hi link snTodos Comment
-syn match snDone /\%(✓\)/
-hi link snDone Comment
-
 let g:iced_enable_clj_kondo_local_analysis=v:true
   " Format whole buffer on writing files
   au BufWritePre *.clj,*.cljs,*.cljc,*.edn execute ':IcedFormatSyncAll'
@@ -442,20 +403,6 @@ let g:iced_enable_clj_kondo_local_analysis=v:true
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char = '│'
 let g:indent_blankline_show_current_context = v:true
-
-let g:slimv_keybindings=2
-
-func! GodotSettings() abort
-    setlocal foldmethod=expr
-    setlocal tabstop=4
-    nnoremap <buffer> <F6> :GodotRunCurrent<CR>
-    nnoremap <buffer> <F7> :GodotRunFZF<CR>
-    nnoremap <buffer> <F8> :GodotRun<CR>
-endfunc
-augroup godot | au!
-    au FileType gdscript call GodotSettings()
-augroup end
-let g:godot_executable = '/Applications/Godot.app'
 
 " Lua
 lua << EOF
