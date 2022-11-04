@@ -425,6 +425,6 @@ lua << EOF
 EOF
 
 inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#previous(1) : pumvisible() ? "\<C-p>" : "\<BS>"
+inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : pumvisible() ? "\<C-p>" : "\<BS>"
 
 

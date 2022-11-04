@@ -32,5 +32,6 @@
   "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown", "python"],
   "python.formatting.provider": "blackd",
   "python.linting.flake8Enabled": true,
-  "pyright.testing.provider": "pytest"
+  "pyright.testing.provider": "pytest",
+  "suggest.noselect": true
 }
