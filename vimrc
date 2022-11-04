@@ -1,4 +1,6 @@
 let g:sexp_filetypes='lisp,scheme,clojure,janet'
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -9,8 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " vim-plugs
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'bling/vim-airline'
@@ -179,7 +180,7 @@ endif
 nmap <tab> v>
 nmap <s-tab> v<
 
-nmap <F5> :NERDTree<CR>
+nmap <F5> :NvimTreeToggle<CR>
 
 " vim-startify
 autocmd User Startified set buftype=
@@ -407,20 +408,23 @@ let g:indent_blankline_show_current_context = v:true
 " Lua
 lua << EOF
   require('treesitter')
+  require("nvim-tree").setup(
+  {
+      renderer = {
+        icons = {
+          show = {
+            file = false,
+            folder = false,
+            folder_arrow = false,
+            git = false
+            }
+          }
+        }
+    }
+  )
 EOF
 
-" for new coc.nvim "custom popup""
-function! CheckBackSpace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ CheckBackSpace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#previous(1) : pumvisible() ? "\<C-p>" : "\<BS>"
 
-" below is for using ENTER for completion, I actually don't like it, CTRL+Y works better for me, you can omit this part if you are like me
 
-inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() :
-        \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
