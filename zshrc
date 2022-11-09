@@ -184,8 +184,6 @@ eval "$(pyenv init --path)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
-test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -195,3 +193,9 @@ alias isvg='rsvg-convert | icat'
 alias icat='kitty icat --align=left'
 
 alias ppp='cd ~/projects'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pogaair/projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pogaair/projects/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/pogaair/projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pogaair/projects/google-cloud-sdk/completion.zsh.inc'; fi
