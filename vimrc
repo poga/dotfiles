@@ -61,6 +61,7 @@ Plug 'simrat39/rust-tools.nvim'
 " ======
 " Theme
 Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 filetype plugin indent on
@@ -69,6 +70,7 @@ syntax on
 let g:seoul256_background = 233
 set background=dark
 colorscheme hybrid
+colorscheme catppuccin-mocha
 
 set cursorline
 set nocursorcolumn
