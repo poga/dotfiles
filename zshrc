@@ -156,20 +156,20 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 alias tmux='tmux -2'
 eval $(/opt/homebrew/bin/brew shellenv)
 
 
 # homebrew LLVM
-# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 #
-# export CPATH=$CPATH:/opt/homebrew/include
-# export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
-#
-# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export CPATH=$CPATH:/opt/homebrew/include
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export KUBE_EDITOR=nvim
 
 eval "$(direnv hook zsh)"
