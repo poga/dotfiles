@@ -22,6 +22,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jpalardy/vim-slime'
 Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
+Plug 'chaoren/vim-wordmotion'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
