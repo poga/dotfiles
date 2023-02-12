@@ -44,6 +44,7 @@ Plug 'LunarWatcher/auto-pairs'
 " Language Support
 Plug 'tbastos/vim-lua', {'for': 'lua'}
 Plug 'exu/pgsql.vim'
+Plug 'NoahTheDuke/vim-just'
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
 Plug 'vim-ruby/vim-ruby'
@@ -100,6 +101,8 @@ set mouse=a
 set ignorecase
 set lazyredraw
 set ttyfast
+set number                     " Show current line number
+set relativenumber             " Show relative line numbers
 
 " Better display for messages
 set cmdheight=2
