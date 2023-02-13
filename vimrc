@@ -57,6 +57,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'wgwoods/vim-systemd-syntax'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'simrat39/rust-tools.nvim'
