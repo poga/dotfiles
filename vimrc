@@ -419,12 +419,13 @@ lua << EOF
   require("nvim-tree").setup(
   {
       renderer = {
+        add_trailing = true,
         icons = {
           show = {
             file = false,
             folder = false,
             folder_arrow = false,
-            git = false
+            git = true
             }
           }
         }
@@ -434,5 +435,3 @@ EOF
 
 inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : pumvisible() ? "\<C-p>" : "\<BS>"
-
-
