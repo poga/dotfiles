@@ -383,6 +383,8 @@ let g:coc_global_extensions = [
       \'coc-lists'
       \]
 
+let g:coc_config_home = '~/.config/nvim/'
+
 let g:gitgutter_sign_added = '┃'
 let g:gitgutter_sign_modified = '┃'
 let g:gitgutter_sign_removed = '┃'
