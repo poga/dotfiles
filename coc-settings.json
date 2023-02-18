@@ -29,7 +29,7 @@
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown", "python"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "Markdown", "python", "typescript", "typescriptreact", "javascript", "javascriptreact"],
   "python.formatting.provider": "blackd",
   "python.linting.flake8Enabled": true,
   "pyright.testing.provider": "pytest",
