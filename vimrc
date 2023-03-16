@@ -74,7 +74,6 @@ syntax on
 let g:seoul256_background = 233
 set background=dark
 colorscheme hybrid
-colorscheme catppuccin-mocha
 
 set cursorline
 set nocursorcolumn
