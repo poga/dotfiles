@@ -24,6 +24,7 @@ Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
 Plug 'chaoren/vim-wordmotion'
 Plug 'itchyny/vim-cursorword'
+Plug 'github/copilot.vim'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
