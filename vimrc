@@ -110,6 +110,7 @@ require("catppuccin").setup({
     color_overrides = {},
     custom_highlights = function(colors)
       return {
+        Special = { style = {"bold"}, fg = colors.overlay0 },
         CocSemMacro = { style = {"italic"}, fg = colors.sapphire },
         CocSemFunction = { fg = colors.green },
         CocSemMethod = { fg = colors.sapphire },
@@ -282,9 +283,6 @@ highligh Todo ctermfg=232 ctermbg=220 cterm=underline
 
 let g:jsx_ext_required = 0
 
-" close vim if NERDTree is the only opened buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -392,9 +390,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
-" Call Format on save for rust
-autocmd BufWritePre *.rs :call CocAction('format')
-
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -414,11 +409,6 @@ nnoremap <leader>C <cmd>Commands<cr>
 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-
-" Slime
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 let g:coc_global_extensions = [
@@ -441,22 +431,6 @@ highlight GitGutterChange guifg=#bbbb00 ctermfg=58
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 let g:highlightedyank_highlight_duration = 200
-
-let g:conjure#mapping#prefix = ","
-
-" Enable vim-iced's default key mapping
-" This is recommended for newbies
-let g:iced_enable_default_key_mappings = v:true
-let g:iced_enable_clj_kondo_analysis = v:true
-let g:iced_enable_clj_kondo_local_analysis=v:true
-let g:iced#navigate#prefer_local_jump=v:true
-
-au Filetype lisp let b:AutoPairs = {"(": ")", "{": "}", '"': '"', "[": "]"}
-
-let g:iced_enable_clj_kondo_local_analysis=v:true
-  " Format whole buffer on writing files
-  au BufWritePre *.clj,*.cljs,*.cljc,*.edn execute ':IcedFormatSyncAll'
-
 
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char = '│'
