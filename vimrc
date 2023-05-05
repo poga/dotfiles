@@ -26,6 +26,7 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'itchyny/vim-cursorword'
 Plug 'github/copilot.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'HiPhish/nvim-ts-rainbow2'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -66,7 +67,6 @@ Plug 'simrat39/rust-tools.nvim'
 
 " ======
 " Theme
-Plug 'w0ng/vim-hybrid', { 'as': 'hybrid' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
@@ -75,7 +75,66 @@ syntax on
 
 let g:seoul256_background = 233
 set background=dark
-" colorscheme hybrid
+set termguicolors
+lua << EOF
+require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false,
+    show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+    term_colors = false,
+    dim_inactive = {
+        enabled = true,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {  },
+        functions = {},
+        keywords = { },
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = function(colors)
+      return {
+        CocSemMacro = { style = {"italic"} },
+        CocSemFunction = { fg = colors.green },
+        CocSemMethod = { fg = colors.sapphire },
+        CocSemInterface = { fg = colors.lavender },
+        CocSemEnum = { fg = colors.sky },
+        CocSemEnumMember = { fg = colors.sky, style = {"italic"} },
+        CocSemVariable = { fg= colors.overlay0 },
+        }
+    end,
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+        notify = false,
+        mini = false,
+        coc_nvim = true,
+        indent_blankline = {
+            enabled = true,
+            colored_indent_levels = false,
+        },
+    },
+})
+EOF
+let g:airline_theme = 'catppuccin'
 colorscheme catppuccin-mocha
 
 set cursorline
@@ -362,19 +421,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
-let g:rainbow_conf = {
-\  'ctermfgs': [70, 68, 66, 64, 62, 60, 58, 56, 54, 52],
-\  'separately': {
-\    'css': 0,
-\    'elixir': 0,
-\    'yaml': 0,
-\    'racket': {
-\      'parentheses': ["start=/(/ end=/)/ fold", "start=/`(/ end=/)/ fold", "start=/'(/ end=/)/ fold", 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-    \}
-  \} }
-
-let g:rainbow_active = 1
-
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 let g:coc_global_extensions = [
       \'coc-rust-analyzer',
@@ -435,6 +481,16 @@ lua << EOF
         }
     }
   )
+
+  require('nvim-treesitter.configs').setup {
+  rainbow = {
+    enable = true,
+    -- Which query to use for finding delimiters
+    query = 'rainbow-parens',
+    -- Highlight the entire buffer all at once
+    strategy = require('ts-rainbow').strategy.global,
+  }
+}
 EOF
 
 inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -446,3 +502,4 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 " notification after file change
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
