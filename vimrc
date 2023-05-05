@@ -110,7 +110,7 @@ require("catppuccin").setup({
     color_overrides = {},
     custom_highlights = function(colors)
       return {
-        CocSemMacro = { style = {"italic"} },
+        CocSemMacro = { style = {"italic"}, fg = colors.sapphire },
         CocSemFunction = { fg = colors.green },
         CocSemMethod = { fg = colors.sapphire },
         CocSemInterface = { fg = colors.lavender },
@@ -264,7 +264,6 @@ let g:AutoPairsMultilineClose=0
 
 " italic syntax
 highlight htmlArg gui=italic cterm=italic,underline
-highlight Comment ctermfg=36 cterm=italic
 
 highligh javascriptVariable cterm=italic ctermfg=150 gui=italic
 highligh javascriptBoolean cterm=italic ctermfg=37 gui=italic
