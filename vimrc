@@ -117,7 +117,7 @@ require("catppuccin").setup({
         CocSemInterface = { fg = colors.lavender },
         CocSemEnum = { fg = colors.sky },
         CocSemEnumMember = { fg = colors.sky, style = {"italic"} },
-        CocSemVariable = { fg= colors.overlay0 },
+        CocSemVariable = { fg= colors.overlay2 },
         }
     end,
     integrations = {
