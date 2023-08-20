@@ -419,7 +419,8 @@ let g:coc_global_extensions = [
       \'coc-go',
       \'coc-pyright',
       \'coc-tsserver',
-      \'coc-lists'
+      \'coc-lists',
+      \'coc-deno'
       \]
 
 let g:coc_config_home = '~/.config/nvim/'
@@ -477,4 +478,3 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 " notification after file change
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-
