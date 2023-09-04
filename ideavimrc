@@ -13,5 +13,4 @@ set highlightedyank
 " Press `f` to activate AceJump
 map <leader>f :action AceAction<CR>
 
-set relativenumber
 set number
