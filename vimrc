@@ -138,6 +138,8 @@ EOF
 let g:airline_theme = 'catppuccin'
 colorscheme catppuccin-mocha
 
+
+set nomodeline
 set cursorline
 set nocursorcolumn
 syntax sync minlines=256
