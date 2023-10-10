@@ -166,7 +166,6 @@ set ignorecase
 set lazyredraw
 set ttyfast
 set number                     " Show current line number
-set relativenumber             " Show relative line numbers
 
 " Better display for messages
 set cmdheight=2

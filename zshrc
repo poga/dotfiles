@@ -202,3 +202,4 @@ if [ -f "$HOME/projects/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/projects
 if [ -f "$HOME/projects/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/projects/google-cloud-sdk/completion.zsh.inc"; fi
 
 alias rr='rustrover'
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
