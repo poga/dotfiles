@@ -14,3 +14,7 @@ set highlightedyank
 map <leader>f :action AceAction<CR>
 
 set number
+
+map <tab> v>
+map <s-tab> v<
+
