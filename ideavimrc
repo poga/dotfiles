@@ -18,3 +18,4 @@ set number
 map <tab> v>
 map <s-tab> v<
 
+set clipboard+=unnamed
