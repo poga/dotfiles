@@ -11,7 +11,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " vim-plugs
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-tree/nvim-tree.lua'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-endwise'
 Plug 'bling/vim-airline'
@@ -25,12 +24,9 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'itchyny/vim-cursorword'
 Plug 'github/copilot.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'HiPhish/nvim-ts-rainbow2'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -67,6 +63,7 @@ Plug 'simrat39/rust-tools.nvim'
 " ======
 " Theme
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'w0ng/vim-hybrid'
 call plug#end()
 
 filetype plugin indent on
@@ -75,67 +72,7 @@ syntax on
 let g:seoul256_background = 233
 set background=dark
 set termguicolors
-lua << EOF
-require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
-        light = "latte",
-        dark = "mocha",
-    },
-    transparent_background = false,
-    show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-    term_colors = false,
-    dim_inactive = {
-        enabled = true,
-        shade = "dark",
-        percentage = 0.15,
-    },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
-    styles = {
-        comments = { "italic" },
-        conditionals = { "italic" },
-        loops = {  },
-        functions = {},
-        keywords = { },
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-    },
-    color_overrides = {},
-    custom_highlights = function(colors)
-      return {
-        Special = { style = {"bold"}, fg = colors.overlay0 },
-        CocSemMacro = { style = {"italic"}, fg = colors.sapphire },
-        CocSemFunction = { fg = colors.green },
-        CocSemMethod = { fg = colors.sapphire },
-        CocSemInterface = { fg = colors.lavender },
-        CocSemEnum = { fg = colors.sky },
-        CocSemEnumMember = { fg = colors.sky, style = {"italic"} },
-        CocSemVariable = { fg= colors.overlay2 },
-        }
-    end,
-    integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        telescope = true,
-        notify = false,
-        mini = false,
-        coc_nvim = true,
-        indent_blankline = {
-            enabled = true,
-            colored_indent_levels = false,
-        },
-    },
-})
-EOF
-let g:airline_theme = 'catppuccin'
-colorscheme catppuccin-mocha
+colorscheme catppuccin
 
 
 set nomodeline
@@ -438,46 +375,6 @@ let g:highlightedyank_highlight_duration = 200
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char = '│'
 let g:indent_blankline_show_current_context = v:true
-
-" Lua
-lua << EOF
-  local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-  parser_config.haxe = {
-    install_info = {
-      url = "https://github.com/vantreeseba/tree-sitter-haxe",
-      files = {"src/parser.c"},
-      -- optional entries:
-      branch = "main",
-    },
-    filetype = "haxe",
-  }
-  require('treesitter')
-  require("nvim-tree").setup(
-  {
-      renderer = {
-        add_trailing = true,
-        icons = {
-          show = {
-            file = false,
-            folder = false,
-            folder_arrow = false,
-            git = true
-            }
-          }
-        }
-    }
-  )
-
-  require('nvim-treesitter.configs').setup {
-  rainbow = {
-    enable = true,
-    -- Which query to use for finding delimiters
-    query = 'rainbow-parens',
-    -- Highlight the entire buffer all at once
-    strategy = require('ts-rainbow').strategy.global,
-  }
-}
-EOF
 
 inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : pumvisible() ? "\<C-p>" : "\<BS>"

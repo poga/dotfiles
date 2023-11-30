@@ -121,7 +121,7 @@ PERL_MM_OPT="INSTALL_BASE=/Users/poga/perl5"; export PERL_MM_OPT;
 alias l='ls -al'
 alias py='python3'
 
-export EDITOR=vim
+export EDITOR=nvim
 alias vim=nvim
 
 export PATH=$PATH:~/.local/bin
@@ -203,3 +203,17 @@ if [ -f "$HOME/projects/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/pr
 
 alias rr='rustrover'
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+function frg {
+    result=$(rg --ignore-case --color=always --line-number --no-heading . |
+      fzf --ansi \
+          --color 'hl:-1:underline,hl+:-1:underline:reverse' \
+          --delimiter ':' \
+          --preview "bat --color=always {1} --theme='Solarized (light)' --highlight-line {2}" \
+          --preview-window 'up,60%,border-bottom,+{2}+3/3,~3')
+    file=${result%%:*}
+    linenumber=$(echo "${result}" | cut -d: -f2)
+    if [[ -n "$file" ]]; then
+            $EDITOR +"${linenumber}" "$file"
+    fi
+  }
