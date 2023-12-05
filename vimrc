@@ -24,6 +24,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'itchyny/vim-cursorword'
 Plug 'github/copilot.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'nvim-tree/nvim-tree.lua'
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -385,3 +386,24 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 " notification after file change
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+lua << EOF
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
+require("nvim-tree").setup(
+  {
+    renderer = {
+      add_trailing = true,
+      icons = {
+        show = {
+          file = false,
+          folder = false,
+          folder_arrow = false,
+          git = true
+          }
+        }
+      }
+  }
+)
+EOF
