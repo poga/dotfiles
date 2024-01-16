@@ -346,6 +346,7 @@ nnoremap <leader>` <cmd>GFiles<cr>
 nnoremap <leader>~ <cmd>Files<cr>
 nnoremap <leader>B <cmd>Buffers<cr>
 nnoremap <leader>C <cmd>Commands<cr>
+nnoremap <leader>G <cmd>RG<cr>
 
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'

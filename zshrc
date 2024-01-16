@@ -195,12 +195,6 @@ alias s="kitty +kitten ssh"
 
 alias ppp='cd ~/projects'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/projects/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/projects/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/projects/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/projects/google-cloud-sdk/completion.zsh.inc"; fi
-
 alias rr='rustrover'
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
@@ -217,3 +211,9 @@ function frg {
             $EDITOR +"${linenumber}" "$file"
     fi
   }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/poga/projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/poga/projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/completion.zsh.inc'; fi
