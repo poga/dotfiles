@@ -165,17 +165,12 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # homebrew LLVM
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-#
-export CPATH=$CPATH:/opt/homebrew/include
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
-
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 export KUBE_EDITOR=nvim
 
 eval "$(direnv hook zsh)"
 
 alias k='kubectl'
-alias kp='kube-prompt'
 alias lg='lazygit'
 
 export PATH=$PATH:~/.mix/escripts
@@ -217,3 +212,6 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/p
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/poga/projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/completion.zsh.inc'; fi
+
+export DENO_INSTALL="/Users/poga/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
