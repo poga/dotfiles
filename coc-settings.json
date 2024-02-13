@@ -12,7 +12,7 @@
     "godot": {
       "host": "127.0.0.1",
       "filetypes": ["gdscript"],
-      "port": 6008
+      "port": 6005
     }
   },
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
