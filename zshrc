@@ -213,5 +213,5 @@ if [ -f '/Users/poga/projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/p
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/poga/projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/poga/projects/google-cloud-sdk/completion.zsh.inc'; fi
 
-export DENO_INSTALL="/Users/poga/.deno"
+export DENO_INSTALL="~/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
