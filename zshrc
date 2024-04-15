@@ -219,3 +219,5 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export CPATH=$CPATH:/opt/homebrew/include
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
 
+
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
