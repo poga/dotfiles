@@ -38,6 +38,8 @@ Plug 'terryma/vim-expand-region'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 Plug 'LunarWatcher/auto-pairs'
+Plug 'tpope/vim-fugitive'
+
 
 " ======
 " Language Support
