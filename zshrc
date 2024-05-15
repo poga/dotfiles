@@ -175,3 +175,6 @@ alias g='git'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+
