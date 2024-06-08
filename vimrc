@@ -216,7 +216,7 @@ highligh xmlAttrib cterm=italic ctermfg=166 gui=italic,underline
 highligh jsxAttrib cterm=italic ctermfg=166 gui=italic
 highligh jsxTag ctermfg=107
 
-hi CocInlayHint guibg=Black guifg=Gray ctermbg=Black ctermfg=Gray
+hi CocInlayHint guibg=232 guifg=Gray ctermbg=232 ctermfg=Gray
 
 " TODO
 highligh Todo ctermfg=232 ctermbg=220 cterm=underline
