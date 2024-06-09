@@ -107,6 +107,7 @@ set lazyredraw
 set ttyfast
 set number                     " Show current line number
 
+
 " Better display for messages
 set cmdheight=2
 
@@ -389,6 +390,9 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 " notification after file change
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+set mousescroll=ver:1,hor:0
+
 
 lua << EOF
 vim.g.loaded_netrw = 1
