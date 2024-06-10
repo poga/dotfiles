@@ -21,6 +21,7 @@
   "python.formatting.provider": "blackd",
   "python.linting.flake8Enabled": true,
   "pyright.testing.provider": "pytest",
+  "pyright.inlayHints.parameterTypes": false,
   "suggest.noselect": true,
   "semanticTokens.enable": true,
   "semanticTokens.filetypes": ["rust", "javascript", "python"]
