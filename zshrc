@@ -84,8 +84,8 @@ export PATH=$PATH:~/.local/bin
 export LC_CTYPE="en_US.UTF-8"
 export LANG=en_US.UTF-8
 
-if [ -x "$(command -v exa)" ]; then
-alias ls='exa'
+if [ -x "$(command -v eza)" ]; then
+alias ls='eza'
 fi
 if [ -x "$(command -v bat)" ]; then
 alias cat='bat --style="changes"'
@@ -178,3 +178,5 @@ alias g='git'
 
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
+
+source "$HOME/.rye/env"
