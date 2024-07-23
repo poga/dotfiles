@@ -24,5 +24,6 @@
   "pyright.inlayHints.parameterTypes": false,
   "suggest.noselect": true,
   "semanticTokens.enable": true,
-  "semanticTokens.filetypes": ["rust", "javascript", "python"]
+  "semanticTokens.filetypes": ["rust", "javascript", "python"],
+  "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": false
 }

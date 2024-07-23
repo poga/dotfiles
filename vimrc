@@ -25,6 +25,8 @@ Plug 'itchyny/vim-cursorword'
 Plug 'github/copilot.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 " requires neovim 5.0
 Plug 'hrsh7th/nvim-compe'
@@ -61,7 +63,6 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'wgwoods/vim-systemd-syntax'
 
 Plug 'neovim/nvim-lspconfig'
-Plug 'simrat39/rust-tools.nvim'
 
 " ======
 " Theme
