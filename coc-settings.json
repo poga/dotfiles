@@ -25,5 +25,4 @@
   "suggest.noselect": true,
   "semanticTokens.enable": true,
   "semanticTokens.filetypes": ["rust", "javascript", "python"],
-  "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": false
 }
