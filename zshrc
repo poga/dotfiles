@@ -178,5 +178,3 @@ alias g='git'
 
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
-
-source "$HOME/.rye/env"
