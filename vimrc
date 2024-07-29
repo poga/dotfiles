@@ -18,7 +18,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary' " gcc for commenting out a line, gc<motion> for commenting motion target. ex. gcap
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'jpalardy/vim-slime'
 Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
 Plug 'itchyny/vim-cursorword'
@@ -37,7 +36,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 
 Plug 'terryma/vim-expand-region'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 Plug 'LunarWatcher/auto-pairs'
 Plug 'tpope/vim-fugitive'
@@ -50,16 +48,11 @@ Plug 'exu/pgsql.vim'
 Plug 'NoahTheDuke/vim-just'
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'nginx/nginx', {'rtp': 'contrib/vim/'}
-Plug 'vim-ruby/vim-ruby'
 Plug 'ap/vim-css-color'
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'NLKNguyen/vim-lisp-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'JuliaEditorSupport/julia-vim'
 Plug 'wgwoods/vim-systemd-syntax'
 
 Plug 'neovim/nvim-lspconfig'
