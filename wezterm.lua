@@ -13,7 +13,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font("Operator Mono Lig", {weight="Book", stretch="Normal"})
 config.color_scheme = 'Catppuccin Mocha'
 
-config.font_size = 13.0
+config.font_size = 12.0
 
 config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
