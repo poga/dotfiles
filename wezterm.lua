@@ -70,7 +70,7 @@ config.window_frame = {
   font_size = 12,
 }
 
-config.line_height = 1.1
+config.line_height = 1.05
 
 -- and finally, return the configuration to wezterm
 return config
