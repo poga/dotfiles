@@ -48,6 +48,10 @@ config.keys = {
       action = wezterm.action.ActivatePaneDirection 'Right',
   },
 }
+config.inactive_pane_hsb = {
+  saturation = 0.5,
+  brightness = 0.5,
+}
 
 -- and finally, return the configuration to wezterm
 return config
