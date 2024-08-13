@@ -68,6 +68,7 @@ config.window_frame = {
 }
 
 config.line_height = 1.05
+config.show_new_tab_button_in_tab_bar = false
 
 -- and finally, return the configuration to wezterm
 return config
