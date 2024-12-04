@@ -178,4 +178,4 @@ alias g='git'
 
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
-. "/Users/poga/.deno/env"
+source "$HOME/.deno/env"
