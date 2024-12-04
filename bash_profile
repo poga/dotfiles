@@ -129,3 +129,4 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
  test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 . "$HOME/.cargo/env"
+. "/Users/poga/.deno/env"
