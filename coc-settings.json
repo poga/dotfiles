@@ -26,4 +26,7 @@
   "suggest.noselect": true,
   "semanticTokens.enable": true,
   "semanticTokens.filetypes": ["rust", "javascript", "python"],
+  "rust-analyzer.server.extraEnv": {
+    "RUSTFLAGS": "-C linker=/opt/homebrew/opt/llvm/bin/clang"
+  }
 }
