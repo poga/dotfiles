@@ -179,3 +179,4 @@ alias g='git'
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 source "$HOME/.deno/env"
+eval "$(mise activate zsh)"
