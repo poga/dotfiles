@@ -25,6 +25,7 @@ Plug 'github/copilot.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'tpope/vim-fugitive'
 
 
 " requires neovim 5.0
