@@ -60,18 +60,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source "$HOME/.cargo/env"
 
 export PATH=$PATH:/opt/homebrew/bin
-
-PATH="/Users/poga/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/poga/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/poga/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/poga/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/poga/perl5"; export PERL_MM_OPT;
 
 alias l='ls -al'
 alias py='python3'
@@ -103,13 +94,9 @@ git config --global user.email hi@devpoga.org
 git config --global core.editor nvim
 fi
 
-export PATH=$PATH:/Applications/Julia-1.6.app/Contents/Resources/julia/bin
-
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
-test -r /Users/poga/.opam/opam-init/init.sh && . /Users/poga/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 #export PATH="/usr/local/opt/llvm/bin:$PATH"
 
@@ -130,18 +117,9 @@ alias lg='lazygit'
 
 export PATH=$PATH:~/.mix/escripts
 
-eval "$(pyenv init --path)"
-
-export PATH="$HOME/.poetry/bin:$PATH"
-
 alias isvg='rsvg-convert | icat'
 alias icat='kitty icat --align=left'
 alias s="kitty +kitten ssh"
-
-alias ppp='cd ~/projects'
-
-alias rr='rustrover'
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 function frg {
     result=$(rg --ignore-case --color=always --line-number --no-heading . |
@@ -169,7 +147,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export CPATH=$CPATH:/opt/homebrew/include
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
 
-
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 alias g='git'
 
@@ -180,3 +157,5 @@ export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 source "$HOME/.deno/env"
 eval "$(mise activate zsh)"
+
+alias godot='/Applications/Godot.app/Contents/MacOS/Godot'

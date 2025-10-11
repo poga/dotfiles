@@ -55,6 +55,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'wgwoods/vim-systemd-syntax'
+Plug 'PedramNavid/dbtpal'
 
 Plug 'neovim/nvim-lspconfig'
 
