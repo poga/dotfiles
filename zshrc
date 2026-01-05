@@ -156,6 +156,13 @@ alias g='git'
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 source "$HOME/.deno/env"
-eval "$(mise activate zsh)"
 
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
+
+# Init Homebrew, which adds environment variables
+eval "$(brew shellenv)"
+
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit
