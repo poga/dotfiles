@@ -11,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay -v 0.20 /System/Library/Sounds/Tink.aiff"
+            "command": "afplay -v 0.10 /System/Library/Sounds/Tink.aiff"
           }
         ]
       }
@@ -21,7 +21,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay -v 0.25 /System/Library/Sounds/Ping.aiff"
+            "command": "afplay -v 0.15 /System/Library/Sounds/Blow.aiff"
           }
         ]
       }
@@ -38,6 +38,11 @@
       "Bash(ls:*)",
       "Bash(cat:*)",
       "Bash(just:*)",
+      "Bash(xxd:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(tree:*)",
+      "Bash(file:*)",
       "Read",
       "Skill(superpowers:brainstorming)",
       "Skill(superpowers:writing-plans)",
