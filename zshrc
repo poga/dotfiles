@@ -60,8 +60,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 
-source "$HOME/.cargo/env"
-
 export PATH=$PATH:/opt/homebrew/bin
 
 alias l='ls -al'
@@ -110,8 +108,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 export KUBE_EDITOR=nvim
 
-eval "$(direnv hook zsh)"
-
 alias k='kubectl'
 alias lg='lazygit'
 
@@ -154,8 +150,6 @@ alias g='git'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
-
-source "$HOME/.deno/env"
 
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
