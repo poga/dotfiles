@@ -166,4 +166,4 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-alias ccd='claude --dangerously-skip-permissions'
+alias ccd='claude --dangerously-skip-permissions --chrome'
