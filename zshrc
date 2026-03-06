@@ -167,3 +167,10 @@ compinit
 # End of Docker CLI completions
 
 alias ccd='claude --dangerously-skip-permissions --chrome'
+
+# bun completions
+[ -s "/Users/pogaair/.bun/_bun" ] && source "/Users/pogaair/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -1,33 +1,4 @@
 {
-  "enabledPlugins": {
-    "superpowers@superpowers-marketplace": true
-  },
-  "feedbackSurveyState": {
-    "lastShownTime": 1754297452731
-  },
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "afplay -v 0.10 /System/Library/Sounds/Tink.aiff"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "afplay -v 0.15 /System/Library/Sounds/Blow.aiff"
-          }
-        ]
-      }
-    ]
-  },
-  "model": "opus",
   "permissions": {
     "allow": [
       "Bash(test:*)",
@@ -55,8 +26,37 @@
       "Skill(superpowers:subagent-driven-development)",
       "Skill(superpowers:finishing-a-development-branch)"
     ],
+    "deny": [],
     "ask": [],
-    "defaultMode": "acceptEdits",
-    "deny": []
+    "defaultMode": "acceptEdits"
+  },
+  "model": "opus",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay -v 0.10 /System/Library/Sounds/Tink.aiff"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay -v 0.15 /System/Library/Sounds/Blow.aiff"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "superpowers@superpowers-marketplace": true
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754297452731
   }
 }
