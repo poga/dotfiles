@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/poga/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -166,10 +173,7 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-alias ccd='claude --dangerously-skip-permissions --chrome'
-
-# bun completions
-[ -s "/Users/pogaair/.bun/_bun" ] && source "/Users/pogaair/.bun/_bun"
+alias ccd='claude --dangerously-skip-permissions --chrome --effort="max"'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

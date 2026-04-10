@@ -54,8 +54,17 @@
     ]
   },
   "enabledPlugins": {
+<<<<<<< HEAD
     "superpowers@superpowers-marketplace": true
   },
+=======
+    "superpowers@superpowers-marketplace": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+>>>>>>> 5bace00 (up)
   "feedbackSurveyState": {
     "lastShownTime": 1754297452731
   }
