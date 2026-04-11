@@ -37,7 +37,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay -v 0.10 /System/Library/Sounds/Tink.aiff"
+            "command": "afplay /System/Library/Sounds/Tink.aiff"
           }
         ]
       }
@@ -47,7 +47,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay -v 0.15 /System/Library/Sounds/Blow.aiff"
+            "command": "afplay /System/Library/Sounds/Blow.aiff"
           }
         ]
       }
