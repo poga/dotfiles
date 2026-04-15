@@ -95,7 +95,6 @@ git config --global alias.st status
 git config --global alias.br branch
 
 git config --global user.name "Poga Po"
-git config --global user.email hi@devpoga.org
 git config --global core.editor nvim
 fi
 

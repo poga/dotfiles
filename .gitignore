@@ -1,1 +1,18 @@
 .DS_Store
+
+# Secrets — defensive, never commit these
+*.env
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+.netrc
+credentials
+credentials.json
+secrets.json
