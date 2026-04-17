@@ -172,7 +172,7 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-alias ccd='claude --dangerously-skip-permissions --chrome --effort="max"'
+alias ccd='claude --dangerously-skip-permissions --chrome'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
